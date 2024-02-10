@@ -16,7 +16,8 @@ const About = () => {
                     src="/static/img/about-me.png"
                     title=""
                     alt=""
-                    layout="fill"
+                    width={200}
+                  height={250}
                   />
                 </div>
               </div>
@@ -149,7 +150,8 @@ const About = () => {
                     src="/static/img/a1.jpeg"
                     title=""
                     alt=""
-                    layout="fill"
+                    height={200}
+                    width={200}
                   />
                 </div>
               </div>
@@ -182,7 +184,8 @@ const About = () => {
                     src="/static/img/a2.jpeg"
                     title=""
                     alt=""
-                    layout="fill"
+                    height={200}
+                    width={200}
                   />
                 </div>
               </div>
@@ -213,7 +216,8 @@ const About = () => {
                     src="/static/img/a3.jpg"
                     title=""
                     alt=""
-                    layout="fill"
+                    height={200}
+                    width={200}
                   />
                 </div>
               </div>

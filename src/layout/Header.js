@@ -39,7 +39,13 @@ const Header = ({ blog }) => {
           <div className="hl-top">
             <div className="hl-logo">
               <div className="img">
-                <Image src="static/img/home-banner.jpg" title="" alt="" />
+                <Image
+                  src="/static/img/home-banner.jpg"
+                  title=""
+                  alt=""
+                  width={200}
+                  height={250}
+                />
               </div>
               <h5>Sebastian</h5>
             </div>

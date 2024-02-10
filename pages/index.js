@@ -32,8 +32,8 @@ const IndexGlitch = () => {
                   <div className="img">
                     <Image
                       src="/static/img/home-banner.jpg"
-                      width={20}
-                      height={20}
+                      width={200}
+                      height={250}
                       alt=""
                     />
                   </div>
