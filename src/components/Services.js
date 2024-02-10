@@ -62,7 +62,7 @@ const Services = () => {
               <div className="feature-content media-body">
                 <h5>Mobile App Development</h5>
                 <p>
-                  Whether it's building responsive layouts, optimizing
+                  Whether {`it's`} building responsive layouts, optimizing
                   performance, or integrating cutting-edge features, I pride
                   myself on delivering solutions that exceed client
                   expectations.
