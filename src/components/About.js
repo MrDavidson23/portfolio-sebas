@@ -155,7 +155,7 @@ const About = () => {
                     debugged, documented, and implemented Web software
                     applications. Applied feedback from code review and
                     implemented changes to meet standards. Updated web pages and
-                    navigation tools to meet the client's current needs and
+                    navigation tools to meet the {`client's`} current needs and
                     improve usability. Documented style guidelines to keep the
                     design consistent across the team.
                   </p>
