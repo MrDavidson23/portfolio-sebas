@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Fragment, useEffect, useState } from "react";
 import { activeSection } from "../utilits";
 const Header = ({ blog }) => {
@@ -7,7 +8,7 @@ const Header = ({ blog }) => {
     if (!blog) {
       activeSection();
     }
-  }, []);
+  }, [blog]);
   return (
     <Fragment>
       <div className="mob-header">
@@ -38,7 +39,7 @@ const Header = ({ blog }) => {
           <div className="hl-top">
             <div className="hl-logo">
               <div className="img">
-                <img src="static/img/home-banner.jpg" title="" alt="" />
+                <Image src="static/img/home-banner.jpg" title="" alt="" />
               </div>
               <h5>Sebastian</h5>
             </div>

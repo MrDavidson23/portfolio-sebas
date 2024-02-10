@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import { Fragment } from "react";
 import SwiperCore, {
   Autoplay,
@@ -34,7 +35,7 @@ const Testimonials = () => {
       <Swiper {...props}>
         <SwiperSlide className="testimonial-01 media">
           <div className="avatar">
-            <img src="static/img/team-1.jpg" title="" alt="" />
+            <Image src="static/img/team-1.jpg" title="" alt="" />
           </div>
           <div className="media-body">
             <p>
@@ -48,7 +49,7 @@ const Testimonials = () => {
         </SwiperSlide>
         <SwiperSlide className="testimonial-01 media">
           <div className="avatar">
-            <img src="static/img/team-2.jpg" title="" alt="" />
+            <Image src="static/img/team-2.jpg" title="" alt="" />
           </div>
           <div className="media-body">
             <p>
@@ -62,7 +63,7 @@ const Testimonials = () => {
         </SwiperSlide>
         <SwiperSlide className="testimonial-01 media">
           <div className="avatar">
-            <img src="static/img/team-3.jpg" title="" alt="" />
+            <Image src="static/img/team-3.jpg" title="" alt="" />
           </div>
           <div className="media-body">
             <p>
@@ -76,7 +77,7 @@ const Testimonials = () => {
         </SwiperSlide>
         <SwiperSlide className="testimonial-01 media">
           <div className="avatar">
-            <img src="static/img/team-1.jpg" title="" alt="" />
+            <Image src="static/img/team-1.jpg" title="" alt="" />
           </div>
           <div className="media-body">
             <p>

@@ -1,3 +1,4 @@
+import Image from "next/image";
 const About = () => {
   return (
     <section
@@ -11,7 +12,12 @@ const About = () => {
             <div className="about-me">
               <div className="img">
                 <div className="img-in">
-                  <img src="static/img/about-me.png" title="" alt="" />
+                  <Image
+                    src="/static/img/about-me.png"
+                    title=""
+                    alt=""
+                    layout="fill"
+                  />
                 </div>
               </div>
             </div>
@@ -139,7 +145,12 @@ const About = () => {
             <div className="row">
               <div className="col-sm-3 col-md-3 col-xl-2">
                 <div className="rb-left">
-                  <img src="static/img/a1.jpeg" title="" alt="" />
+                  <Image
+                    src="/static/img/a1.jpeg"
+                    title=""
+                    alt=""
+                    layout="fill"
+                  />
                 </div>
               </div>
               <div className="col-sm-9 col-md-9 col-xl-10">
@@ -167,7 +178,12 @@ const About = () => {
             <div className="row">
               <div className="col-sm-3 col-md-3 col-xl-2">
                 <div className="rb-left">
-                  <img src="static/img/a2.jpeg" title="" alt="" />
+                  <Image
+                    src="/static/img/a2.jpeg"
+                    title=""
+                    alt=""
+                    layout="fill"
+                  />
                 </div>
               </div>
               <div className="col-sm-9 col-md-9 col-xl-10">
@@ -193,7 +209,12 @@ const About = () => {
             <div className="row">
               <div className="col-sm-3 col-md-3 col-xl-2">
                 <div className="rb-left">
-                  <img src="static/img/a3.jpg" title="" alt="" />
+                  <Image
+                    src="/static/img/a3.jpg"
+                    title=""
+                    alt=""
+                    layout="fill"
+                  />
                 </div>
               </div>
               <div className="col-sm-9 col-md-9 col-xl-10">
