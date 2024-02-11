@@ -5,9 +5,6 @@ const SingleBlog = () => {
     <Layout blog>
       <div className="single-blog">
         <div className="container">
-          <div className="blog-feature-img">
-            <Image src="/static/img/single-blog.jpg" title="" alt="" />
-          </div>
           <div className="row justify-content-center">
             <div className="col-lg-8">
               <article className="article">
@@ -18,7 +15,7 @@ const SingleBlog = () => {
                   <h2>They Now Bade Farewell To The Kind But Unseen People</h2>
                   <div className="media">
                     <div className="avatar">
-                      <Image src="/static/img/team-1.jpg" title="" alt="" />
+                      {/* <Image src="/static/img/team-1.jpg" title="" alt="" layout='fill'/> */}
                     </div>
                     <div className="media-body">
                       <label>Sergio Roth</label>
@@ -82,54 +79,6 @@ const SingleBlog = () => {
                   <a href="#">Managment</a>
                 </div>
               </article>
-              <div className="contact-form article-comment">
-                <h4>Leave a Reply</h4>
-                <form id="contact-form" onSubmit={(e) => e.preventDefault()}>
-                  <div className="row">
-                    <div className="col-md-6">
-                      <div className="form-group">
-                        <input
-                          name="Name"
-                          id="name"
-                          placeholder="Name *"
-                          className="form-control"
-                          type="text"
-                        />
-                      </div>
-                    </div>
-                    <div className="col-md-6">
-                      <div className="form-group">
-                        <input
-                          name="Email"
-                          id="email"
-                          placeholder="Email *"
-                          className="form-control"
-                          type="email"
-                        />
-                      </div>
-                    </div>
-                    <div className="col-md-12">
-                      <div className="form-group">
-                        <textarea
-                          name="message"
-                          id="message"
-                          placeholder="Your message *"
-                          rows={4}
-                          className="form-control"
-                          defaultValue={""}
-                        />
-                      </div>
-                    </div>
-                    <div className="col-md-12">
-                      <div className="send">
-                        <button className="px-btn px-btn-theme">
-                          <span>Submit</span> <i className="arrow" />
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </form>
-              </div>
             </div>
           </div>
         </div>

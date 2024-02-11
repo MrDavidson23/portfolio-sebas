@@ -16,14 +16,19 @@ const Blog = () => {
           <div className="col-md-6 m-15px-tb">
             <div className="blog-grid">
               <div className="blog-img">
-                <Link href="/single-blog">
+                <Link href="/blog1">
                   <a>
-                    <Image src="/static/img/blog-1.jpg" title="" alt="" />
+                    <Image
+                      src="/static/img/blog.png"
+                      title=""
+                      alt=""
+                      width={300} height={300}
+                    />
                   </a>
                 </Link>
               </div>
               <div className="blog-info">
-                <div className="meta">29/FEB/2022 - WEBSITE - 1 COMMENT</div>
+                <div className="meta">29/FEB/2024 - WEBSITE - 1 COMMENT</div>
                 <h6>
                   <Link href="/single-blog">
                     <a>
@@ -40,7 +45,12 @@ const Blog = () => {
               <div className="blog-img">
                 <Link href="/single-blog">
                   <a>
-                    <Image src="/static/img/blog-2.jpg" title="" alt="" />
+                    <Image
+                      src="/static/img/blog.png"
+                      title=""
+                      alt=""
+                      width={300} height={300}
+                    />
                   </a>
                 </Link>
               </div>
@@ -62,7 +72,12 @@ const Blog = () => {
               <div className="blog-img">
                 <Link href="/single-blog">
                   <a>
-                    <Image src="/static/img/blog-3.jpg" title="" alt="" />
+                    <Image
+                      src="/static/img/blog.png"
+                      title=""
+                      alt=""
+                      width={300} height={300}
+                    />
                   </a>
                 </Link>
               </div>
@@ -84,7 +99,12 @@ const Blog = () => {
               <div className="blog-img">
                 <Link href="/single-blog">
                   <a>
-                    <Image src="/static/img/blog-4.jpg" title="" alt="" />
+                    <Image
+                      src="/static/img/blog.png"
+                      title=""
+                      alt=""
+                      width={300} height={300}
+                    />
                   </a>
                 </Link>
               </div>

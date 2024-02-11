@@ -59,10 +59,10 @@ const About = () => {
                   </div>
                 </div>
                 <div className="btn-bar">
-                  <a className="px-btn px-btn-theme" href="#">
+                  <a className="px-btn px-btn-theme" href="#contactus">
                     <span>Contact Me</span>
                   </a>
-                  <a className="px-btn px-btn-theme" href="#">
+                  <a className="px-btn px-btn-theme" href="#work">
                     <span>Portfolio</span>
                   </a>
                 </div>
