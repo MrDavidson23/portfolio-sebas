@@ -40,11 +40,11 @@ const Header = ({ blog }) => {
             <div className="hl-logo">
               <div className="img">
                 <Image
-                  src="/static/img/home-banner.jpg"
+                  src="/static/img/homebanner.jpeg"
                   title=""
                   alt=""
                   width={200}
-                  height={270}
+                  height={250}
                 />
               </div>
               <h5>Sebastian</h5>
