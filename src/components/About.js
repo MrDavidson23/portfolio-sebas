@@ -13,11 +13,11 @@ const About = () => {
               <div className="img">
                 <div className="img-in">
                   <Image
-                    src="/static/img/about-me.png"
+                    src="/static/img/about-me.jpeg"
                     title=""
                     alt=""
-                    width={200}
-                  height={250}
+                    width={400}
+                    height={550}
                   />
                 </div>
               </div>

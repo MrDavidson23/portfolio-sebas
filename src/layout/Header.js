@@ -44,7 +44,7 @@ const Header = ({ blog }) => {
                   title=""
                   alt=""
                   width={200}
-                  height={250}
+                  height={270}
                 />
               </div>
               <h5>Sebastian</h5>

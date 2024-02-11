@@ -21,7 +21,7 @@ const IndexGlitch = () => {
         <div className="glitch-box">
           <div
             className="glitch"
-            style={{ backgroundImage: "url(static/img/home-banner-1.jpg)" }}
+            style={{ backgroundImage: "url(static/img/home-banner.jpeg)" }}
           />
         </div>
         <div className="home-banner-01 glitch-home">
@@ -30,12 +30,6 @@ const IndexGlitch = () => {
               <div className="col-lg-6">
                 <div className="type-box">
                   <div className="img">
-                    <Image
-                      src="/static/img/home-banner.jpg"
-                      width={200}
-                      height={250}
-                      alt=""
-                    />
                   </div>
                   <h1 className="font-alt">Sebastian Quesada</h1>
                   <p className="lead">
