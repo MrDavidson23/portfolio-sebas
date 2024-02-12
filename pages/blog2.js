@@ -19,15 +19,15 @@ const Blog2 = () => {
                 </div>
                 <div className="article-content">
                   <p>
-                    In today's increasingly mobile-centric world, responsive
-                    design has become more important than ever. Here's why it
+                    In {`today's`} increasingly mobile-centric world, responsive
+                    design has become more important than ever. {`Here's`} why it
                     matters and how you can ensure your websites are optimized
                     for all devices:
                   </p>
                   <h4>What is Responsive Design?</h4>
                   <p>
                     Responsive design is an approach to web development that
-                    ensures a website's layout and content adapt seamlessly to
+                    ensures a {`website's`} layout and content adapt seamlessly to
                     various screen sizes and devices. By using fluid grids,
                     flexible images, and media queries, responsive websites
                     provide an optimal viewing experience across desktops,
@@ -38,7 +38,7 @@ const Blog2 = () => {
                     <li>
                       <p>
                         Enhanced User Experience: Responsive websites adjust to
-                        the user's device, providing an intuitive and consistent
+                        the {`user's`} device, providing an intuitive and consistent
                         experience regardless of screen size.
                       </p>
                     </li>
