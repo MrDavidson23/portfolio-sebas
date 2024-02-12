@@ -21,7 +21,7 @@ const Blog3 = () => {
                   <p>
                     Search engine optimization (SEO) plays a crucial role in
                     driving organic traffic to your website and improving its
-                    visibility in search engine results pages (SERPs). Here's a
+                    visibility in search engine results pages (SERPs). {`Here's`} a
                     comprehensive guide to mastering SEO as a web developer:
                   </p>
                   <ul>
@@ -63,7 +63,7 @@ const Blog3 = () => {
                       <h4>Link Building</h4>
                       <p>
                         Build high-quality backlinks from authoritative websites
-                        to improve your website's authority and credibility in
+                        to improve your {`website's`} authority and credibility in
                         the eyes of search engines. Focus on earning natural,
                         relevant links through content marketing and
                         relationship building.
@@ -81,7 +81,7 @@ const Blog3 = () => {
                     <li>
                       <h4>Performance Monitoring and Optimization</h4>
                       <p>
-                        Regularly monitor your website's performance in search
+                        Regularly monitor your {`website's`} performance in search
                         engine rankings and traffic metrics. Analyze data using
                         tools like Google Analytics and Google Search Console to
                         identify areas for improvement and optimization.
@@ -90,7 +90,7 @@ const Blog3 = () => {
                   </ul>
                   <p>
                     By implementing these SEO strategies and best practices, you
-                    can improve your website's visibility, attract more organic
+                    can improve your {`website's`} visibility, attract more organic
                     traffic, and ultimately achieve your business goals.
                   </p>
                 </div>
