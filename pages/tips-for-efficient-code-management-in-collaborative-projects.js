@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Layout from "../src/layout/Layout";
 const SingleBlog = () => {
   return (

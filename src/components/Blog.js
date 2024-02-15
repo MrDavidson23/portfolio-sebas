@@ -16,7 +16,7 @@ const Blog = () => {
           <div className="col-md-6 m-15px-tb">
             <div className="blog-grid">
               <div className="blog-img">
-                <Link href="/blog1">
+                <Link href="/understanding-ui-ux-and-ixd">
                   <a>
                     <Image
                       src="/static/img/blog.png"
@@ -29,13 +29,10 @@ const Blog = () => {
                 </Link>
               </div>
               <div className="blog-info">
-                <div className="meta">15/NOV/2023</div>
+                <div className="meta">15/FEB/2024</div>
                 <h6>
-                  <Link href="/blog1">
-                    <a>
-                      Tips for Efficient Code Management in Collaborative
-                      Projects
-                    </a>
+                  <Link href="/understanding-ui-ux-and-ixd">
+                    <a>Understanding UI, UX, and IxD</a>
                   </Link>
                 </h6>
               </div>
@@ -44,34 +41,7 @@ const Blog = () => {
           <div className="col-md-6 m-15px-tb">
             <div className="blog-grid">
               <div className="blog-img">
-                <Link href="/blog2">
-                  <a>
-                    <Image
-                      src="/static/img/blog.png"
-                      title=""
-                      alt=""
-                      width={300}
-                      height={300}
-                    />
-                  </a>
-                </Link>
-              </div>
-              <div className="blog-info">
-                <div className="meta">15/DIC/2023</div>
-                <h6>
-                  <Link href="/blog2">
-                    <a>
-                      The Importance of Responsive Design in Web Development
-                    </a>
-                  </Link>
-                </h6>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-6 m-15px-tb">
-            <div className="blog-grid">
-              <div className="blog-img">
-                <Link href="/blog3">
+                <Link href="/mastering-seo-for-web-developers-a-comprehensive-guide">
                   <a>
                     <Image
                       src="/static/img/blog.png"
@@ -86,9 +56,64 @@ const Blog = () => {
               <div className="blog-info">
                 <div className="meta">15/JAN/2024</div>
                 <h6>
-                  <Link href="/blog3">
+                  <Link href="/mastering-seo-for-web-developers-a-comprehensive-guide">
                     <a>
                       Mastering SEO for Web Developers: A Comprehensive Guide
+                    </a>
+                  </Link>
+                </h6>
+              </div>
+            </div>
+          </div>
+          <div className="col-md-6 m-15px-tb">
+            <div className="blog-grid">
+              <div className="blog-img">
+                <Link href="/the-importance-of-responsive-design-in-web-development">
+                  <a>
+                    <Image
+                      src="/static/img/blog.png"
+                      title=""
+                      alt=""
+                      width={300}
+                      height={300}
+                    />
+                  </a>
+                </Link>
+              </div>
+              <div className="blog-info">
+                <div className="meta">15/DIC/2023</div>
+                <h6>
+                  <Link href="/the-importance-of-responsive-design-in-web-development">
+                    <a>
+                      The Importance of Responsive Design in Web Development
+                    </a>
+                  </Link>
+                </h6>
+              </div>
+            </div>
+          </div>
+          <div className="col-md-6 m-15px-tb">
+            <div className="blog-grid">
+              <div className="blog-img">
+                <Link href="/tips-for-efficient-code-management-in-collaborative-projects">
+                  <a>
+                    <Image
+                      src="/static/img/blog.png"
+                      title=""
+                      alt=""
+                      width={300}
+                      height={300}
+                    />
+                  </a>
+                </Link>
+              </div>
+              <div className="blog-info">
+                <div className="meta">15/NOV/2023</div>
+                <h6>
+                  <Link href="/tips-for-efficient-code-management-in-collaborative-projects">
+                    <a>
+                      Tips for Efficient Code Management in Collaborative
+                      Projects
                     </a>
                   </Link>
                 </h6>
