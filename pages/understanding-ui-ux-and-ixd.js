@@ -17,7 +17,7 @@ const Blog3 = () => {
                 </div>
                 <div className="article-content">
                   <p>
-                    When delving into the world of digital design, it's
+                    When delving into the world of digital design, {`it's`}
                     essential to grasp the distinctions between User Interface
                     (UI), User Experience (UX), and Interaction Design (IxD).
                     Each plays a critical role in crafting seamless and engaging
@@ -50,7 +50,7 @@ const Blog3 = () => {
                         the context of websites and mobile apps, UI encompasses
                         design elements such as buttons, colors, typography, and
                         overall aesthetics. Even emerging technologies like the
-                        Apple Vision Pro rely on UI to define the user's
+                        Apple Vision Pro rely on UI to define the {`user's`}
                         interaction with the device.
                       </p>
                     </li>
@@ -64,7 +64,7 @@ const Blog3 = () => {
                         products, aiming to create intuitive and seamless
                         interaction patterns. IxD encompasses the design of
                         gestures, animations, transitions, and other interactive
-                        elements that shape the user experience. It's about
+                        elements that shape the user experience. {`It's `}about
                         crafting interfaces that not only look visually
                         appealing but also respond intuitively to user actions,
                         enhancing usability and engagement.
