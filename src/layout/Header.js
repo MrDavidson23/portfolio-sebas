@@ -53,13 +53,13 @@ const Header = ({ blog }) => {
           {blog ? <MenuWithBlog /> : <MenuWithOutBlog />}
         </div>
         <div className="nav justify-content-center social-icons">
-          <a target="_blank" href="https://www.linkedin.com/in/sebas-quesada/">
+          <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/sebas-quesada/">
             <i className="fab fa-linkedin-in" />
           </a>
-          <a target="_blank" href="https://github.com/MrDavidson23">
+          <a target="_blank" rel="noreferrer" href="https://github.com/MrDavidson23">
             <i className="fab fa-github" />
           </a>
-          <a target="_blank" href="https://api.whatsapp.com/send?phone=50661818868&text=Hello!%20I%20would%20like%20to%20hire%20you%20for%20a%20freelance%20project.%20Are%20you%20available%20for%20an%20online%20meeting%3Fwa.link/25z5pg">
+          <a target="_blank" rel="noreferrer" href="https://api.whatsapp.com/send?phone=50661818868&text=Hello!%20I%20would%20like%20to%20hire%20you%20for%20a%20freelance%20project.%20Are%20you%20available%20for%20an%20online%20meeting%3Fwa.link/25z5pg">
             <i className="fab fa-whatsapp" />
           </a>
         </div>
