@@ -562,6 +562,35 @@
         </div>
       </article>
 
+      <article class="case reveal">
+        <div class="case-head"><span>CASE #003 · LIVE PRODUCT</span><span class="stamp">IN PRODUCTION</span></div>
+        <div class="case-body">
+          <h3>Marcal Security</h3>
+          <p class="case-intro">I run Marcal Security, a security testing practice for teams shipping AI-generated code. Besides manual assessments, it hosts two tools I designed, built, and operate end to end.</p>
+          <ul class="tags" aria-label="Stack"><li>Next.js</li><li>TypeScript</li><li>Supabase</li><li>Cloudflare R2</li><li>Inngest</li><li>Vercel</li></ul>
+
+          <div class="metrics">
+            <div class="metric reveal">
+              <h4>Marcal Share</h4>
+              <p>Share HTML dashboards and reports only with the people you invite, with expiring access and view history. Uploaded pages run in a sandboxed viewer with no access to the viewer's session, and access is enforced with Postgres row-level security.</p>
+            </div>
+            <div class="metric reveal">
+              <h4>Free Secret Scanner</h4>
+              <p>Scan any public GitHub repo for exposed keys. The report arrives by email as a PDF and as a private Marcal Share link. Jobs run on a queue behind a captcha and rate limits, and only masked values are ever stored. Its engine is <a href="https://github.com/MrDavidson23/marcal-scan" target="_blank" rel="noopener noreferrer">marcal-scan</a>.</p>
+            </div>
+          </div>
+
+          <div class="case-foot">
+            <p>Paid plans run on signed, verified billing webhooks.</p>
+            <div class="case-links">
+              <a class="btn btn-hot" href="https://marcalsecurity.com/marcal-share" target="_blank" rel="noopener noreferrer">Try Marcal Share ↗</a>
+              <a class="btn" href="https://marcalsecurity.com/secret-scanner" target="_blank" rel="noopener noreferrer">Secret Scanner ↗</a>
+              <a class="btn" href="https://marcalsecurity.com" target="_blank" rel="noopener noreferrer">marcalsecurity.com ↗</a>
+            </div>
+          </div>
+        </div>
+      </article>
+
       <p class="subtitle">// more on github</p>
       <div class="repos">
         <a class="repo reveal" href="https://github.com/MrDavidson23/make-my-curriculum" target="_blank" rel="noopener noreferrer"><b>make-my-curriculum</b><span>Resume generator. JavaScript.</span></a>
@@ -1015,7 +1044,7 @@
 
   var FILES = {
     'about.txt': ['Sebastián Quesada Calderón. Senior software engineer at IBM, Costa Rica.', 'Shipping React, React Native, and Node.js products since 2020.', 'Now moving into AI and offensive security. CEH. Master\'s in Cybersecurity at TEC (in progress).'],
-    'projects.txt': ['marcal-scan    open-source secret scanner (CLI + GitHub Action)   npx marcal-scan .', 'rag-security   RAG pipeline I attacked with prompt injection and then defended', '(details: scroll up to ./case)'],
+    'projects.txt': ['marcal-scan    open-source secret scanner (CLI + GitHub Action)   npx marcal-scan .', 'rag-security   RAG pipeline I attacked with prompt injection and then defended', 'marcal-share  private HTML sharing, live at marcalsecurity.com/marcal-share', '(details: scroll up to ./case)'],
     'experience.log': ['2023-01..now   IBM            Senior Software Engineer   watsonx.ai, React, Node.js, IBM Cloud', '2022-02..2023  First Factory  Software Engineer          analytics dashboard, AWS Lambda, Terraform', '2020-01..2022  Pancake        Software Engineer          serverless AWS backends, React, Next.js'],
     'skills.nmap': ['443/tcp  web        React, TypeScript, React Native, Next.js', '3000/tcp node       Node.js, Express, NestJS, GraphQL', '8888/tcp data-ai    Python, SQL, watsonx.ai, RAG', '1337/tcp security   LLM security, CEH, Kali Linux', '(full scan: scroll up to ./scan)'],
     '.flag_part3': ['73336e3130727d', '# hex. you know what to do.'],
