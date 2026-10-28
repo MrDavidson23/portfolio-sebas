@@ -239,6 +239,17 @@
   .repo b { display: block; font-family: var(--mono); font-size: 0.9375rem; color: var(--lilac); margin-bottom: 0.35rem; }
   .repo span { font-size: 0.9375rem; color: var(--muted); }
   .subtitle { font-family: var(--mono); font-size: 0.875rem; color: var(--muted); margin-top: 3rem; }
+  .case + .case { margin-top: 1.5rem; }
+  .case-cmd {
+    margin: 0 0 1.75rem; padding: 1.1rem 1.25rem; overflow-x: auto;
+    background: #07050D; border: 1px solid var(--line); border-radius: 14px;
+    font-family: var(--mono); font-size: 0.875rem; line-height: 1.6; color: var(--ink);
+  }
+  .case-cmd .ps { color: var(--green); }
+  .case-cmd .crit { color: var(--red); font-weight: 700; }
+  .case-cmd .high { color: var(--pink); font-weight: 700; }
+  .case-sub { color: var(--muted); margin-bottom: 1rem; }
+  .case-links { display: flex; flex-wrap: wrap; gap: 0.75rem; }
 
   /* git log */
   .gitlog { position: relative; list-style: none; margin: 0; padding: 0 0 0 2.25rem; }
@@ -501,6 +512,52 @@
           <div class="case-foot">
             <p>Small samples from a single 3B model. The README lists every limitation.</p>
             <a class="btn btn-hot" href="https://github.com/MrDavidson23/rag-security" target="_blank" rel="noopener noreferrer">Read the full report on GitHub ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="case reveal">
+        <div class="case-head"><span>CASE #002 · OPEN SOURCE</span><span class="stamp">SHIPPED</span></div>
+        <div class="case-body">
+          <h3>marcal-scan</h3>
+          <p class="case-intro">A secret scanner for GitHub repos and local folders. It runs gitleaks with a pinned ruleset, rates each finding by severity, explains the risk in plain language, and never prints the full secret. I extracted it from the hosted scanner at Marcal Security and published it as a CLI, a library, and a GitHub Action.</p>
+          <ul class="tags" aria-label="Stack"><li>TypeScript</li><li>Node.js</li><li>gitleaks</li><li>SARIF</li><li>GitHub Actions</li><li>npm</li></ul>
+
+          <pre class="case-cmd" aria-label="Example run"><span class="ps">$</span> npx marcal-scan https://github.com/acme/storefront
+
+  <span class="crit">CRITICAL</span> AWS Access Token
+           deploy.js:2  AKIAHO****...PTSP
+  <span class="high">HIGH</span>     GitHub PAT
+           deploy.js:1  ghp_ceSe****...olOU
+
+2 findings: 1 critical, 1 high</pre>
+
+          <p class="case-sub">Every repo it scans is untrusted input, so the threat model starts there:</p>
+          <div class="metrics">
+            <div class="metric reveal">
+              <h4>Hostile config</h4>
+              <p>A repo can ship its own <span class="mono">.gitleaks.toml</span> to hide its secrets. The scanner always forces its own vendored ruleset, and a test proves a malicious config can't suppress a finding.</p>
+            </div>
+            <div class="metric reveal">
+              <h4>Decompression bombs</h4>
+              <p>A few KB can expand to gigabytes. Downloads are streamed with a byte cap, extraction counts bytes and files and stops at a limit, and links are never extracted.</p>
+            </div>
+            <div class="metric reveal">
+              <h4>Runaway scans</h4>
+              <p>gitleaks is killed after a timeout, so a file crafted to make a regex crawl can't hang the job.</p>
+            </div>
+            <div class="metric reveal">
+              <h4>Leaking the leak</h4>
+              <p>Terminal, JSON, HTML, PDF, and SARIF output only ever contain masked values, and the tests check that the raw secret never shows up.</p>
+            </div>
+          </div>
+
+          <div class="case-foot">
+            <p>20 tests, CI on Node 20 and 22, and the repo scans itself with its own action.</p>
+            <div class="case-links">
+              <a class="btn btn-hot" href="https://github.com/MrDavidson23/marcal-scan" target="_blank" rel="noopener noreferrer">Code on GitHub ↗</a>
+              <a class="btn" href="https://www.npmjs.com/package/marcal-scan" target="_blank" rel="noopener noreferrer">npm ↗</a>
+            </div>
           </div>
         </div>
       </article>
@@ -958,6 +1015,7 @@
 
   var FILES = {
     'about.txt': ['Sebastián Quesada Calderón. Senior software engineer at IBM, Costa Rica.', 'Shipping React, React Native, and Node.js products since 2020.', 'Now moving into AI and offensive security. CEH. Master\'s in Cybersecurity at TEC (in progress).'],
+    'projects.txt': ['marcal-scan    open-source secret scanner (CLI + GitHub Action)   npx marcal-scan .', 'rag-security   RAG pipeline I attacked with prompt injection and then defended', '(details: scroll up to ./case)'],
     'experience.log': ['2023-01..now   IBM            Senior Software Engineer   watsonx.ai, React, Node.js, IBM Cloud', '2022-02..2023  First Factory  Software Engineer          analytics dashboard, AWS Lambda, Terraform', '2020-01..2022  Pancake        Software Engineer          serverless AWS backends, React, Next.js'],
     'skills.nmap': ['443/tcp  web        React, TypeScript, React Native, Next.js', '3000/tcp node       Node.js, Express, NestJS, GraphQL', '8888/tcp data-ai    Python, SQL, watsonx.ai, RAG', '1337/tcp security   LLM security, CEH, Kali Linux', '(full scan: scroll up to ./scan)'],
     '.flag_part3': ['73336e3130727d', '# hex. you know what to do.'],
