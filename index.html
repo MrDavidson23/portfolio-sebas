@@ -15,14 +15,14 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://portfoliosebastian.vercel.app/">
-<meta name="theme-color" content="#EEF1F4" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#0F1826" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#F5F2FB" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#130E21" media="(prefers-color-scheme: dark)">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Sebastián Quesada Calderón",
-  "jobTitle": "Software Engineer",
+  "jobTitle": "Senior Software Engineer",
   "worksFor": { "@type": "Organization", "name": "IBM" },
   "address": { "@type": "PostalAddress", "addressLocality": "San José", "addressCountry": "CR" },
   "alumniOf": { "@type": "CollegeOrUniversity", "name": "Tecnológico de Costa Rica" },
@@ -31,31 +31,33 @@
   "sameAs": ["https://github.com/MrDavidson23", "https://www.linkedin.com/in/sebas-quesada/"]
 }
 </script>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%2314213D'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='15' font-weight='700' text-anchor='middle' fill='%23FFE066'%3ESQ%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%236D28D9'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='15' font-weight='700' text-anchor='middle' fill='%23FFFFFF'%3ESQ%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Literata:ital,opsz,wght@0,7..72,300..800;1,7..72,300..800&display=swap" rel="stylesheet">
 <style>
   :root {
-    --paper: #EEF1F4;
+    --paper: #F5F2FB;
     --sheet: #FFFFFF;
-    --ink: #14213D;
-    --muted: #4F5B6E;
-    --line: #C5CDD8;
-    --accent: #2B44D6;
-    --mark: #FFE066;
-    --mark-ink: #14213D;
+    --ink: #1F1535;
+    --muted: #5A5070;
+    --line: #D9D0EA;
+    --accent: #6D28D9;
+    --mark: #F0ABFC;
+    --mark-ink: #1F1535;
+    --on-accent: #FFFFFF;
     --display: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
     --text: "Literata", Georgia, "Times New Roman", serif;
   }
   @media (prefers-color-scheme: dark) {
     :root {
-      --paper: #0F1826;
-      --sheet: #16233A;
-      --ink: #E7ECF4;
-      --muted: #A4B0C2;
-      --line: #2A3850;
-      --accent: #8EA2FF;
+      --paper: #130E21;
+      --sheet: #1E1733;
+      --ink: #EEEAF8;
+      --muted: #B0A6C8;
+      --line: #382D55;
+      --accent: #BBA4FF;
+      --on-accent: #130E21;
     }
   }
 
@@ -174,7 +176,7 @@
   }
   .btn:hover { background: var(--ink); color: var(--paper); text-decoration: none; }
   .btn-solid { background: var(--ink); color: var(--paper); }
-  .btn-solid:hover { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .btn-solid:hover { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
 
   /* Sections */
   .section { border-top: 1px solid var(--line); padding-block: clamp(2.5rem, 6vw, 4rem); }
@@ -273,10 +275,10 @@
   <section class="hero" aria-labelledby="hero-title">
     <div class="wrap">
       <h1 id="hero-title">Senior software engineer building secure web and AI systems.</h1>
-      <p class="lede">I'm a Costa Rican software engineer at IBM. I've been shipping React, React Native, and Node.js products for US and international companies since 2020, and I'm now moving into AI and offensive security.</p>
+      <p class="lede">I'm a Costa Rican senior software engineer at IBM. I've been shipping React, React Native, and Node.js products for US and international companies since 2020, and I'm now moving into AI and offensive security.</p>
       <ul class="glance" aria-label="At a glance">
         <li>6+ years building web platforms</li>
-        <li>Software Engineer at IBM</li>
+        <li>Senior Software Engineer at IBM</li>
         <li>CEH certified</li>
         <li>Master's in Cybersecurity, TEC</li>
       </ul>
@@ -327,7 +329,7 @@
           <p class="job-dates">Jan 2023 to Present</p>
           <div>
             <h3>IBM</h3>
-            <p class="job-role">Software Engineer, Costa Rica (hybrid)</p>
+            <p class="job-role">Senior Software Engineer, Costa Rica (hybrid)</p>
             <ul>
               <li>On a watsonx.ai project for an internal fraud-detection platform, my team built a Q&amp;A assistant and connected it through APIs to a supervised model, trained on historical fraud and not-fraud cases, that gives each new case a fraud-likelihood percentage.</li>
               <li>Prepared datasets and cleaned and normalized text data for that model over about 18 months.</li>
