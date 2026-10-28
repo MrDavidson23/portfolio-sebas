@@ -4,8 +4,8 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Sebastián Quesada Calderón | Senior Software Engineer</title>
-<meta name="description" content="Software engineer at IBM building web platforms for 6+ years with React, Node.js, and TypeScript, now moving toward AI and offensive security.">
-<meta name="color-scheme" content="light dark">
+<meta name="description" content="Senior software engineer at IBM building web platforms for 6+ years with React, Node.js, and TypeScript, now moving toward AI and offensive security.">
+<meta name="color-scheme" content="dark">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Sebastián Quesada Calderón | Senior Software Engineer">
 <meta property="og:description" content="Senior software engineer at IBM. Building web platforms for 6+ years, now moving toward AI and offensive security.">
@@ -15,8 +15,7 @@
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="canonical" href="https://portfoliosebastian.vercel.app/">
-<meta name="theme-color" content="#F5F2FB" media="(prefers-color-scheme: light)">
-<meta name="theme-color" content="#130E21" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#0B0814">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -34,366 +33,652 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%236D28D9'/%3E%3Ctext x='16' y='22' font-family='Arial' font-size='15' font-weight='700' text-anchor='middle' fill='%23FFFFFF'%3ESQ%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Literata:ital,opsz,wght@0,7..72,300..800;1,7..72,300..800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add('js');</script>
 <style>
+  @property --r { syntax: '<length>'; inherits: true; initial-value: 0px; }
+
   :root {
-    --paper: #F5F2FB;
-    --sheet: #FFFFFF;
-    --ink: #1F1535;
-    --muted: #5A5070;
-    --line: #D9D0EA;
-    --accent: #6D28D9;
-    --on-accent: #FFFFFF;
+    --bg: #0B0814;
+    --bg-2: #120D21;
+    --panel: #18122B;
+    --panel-2: #1F1738;
+    --ink: #EEEAF8;
+    --muted: #ADA3C4;
+    --line: #2E2548;
+    --violet: #8B5CF6;
+    --lilac: #BBA4FF;
+    --pink: #F0ABFC;
+    --green: #7CF5B0;
+    --amber: #FFD580;
+    --red: #FF7A9A;
     --display: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
-    --text: "Literata", Georgia, "Times New Roman", serif;
-  }
-  @media (prefers-color-scheme: dark) {
-    :root {
-      --paper: #130E21;
-      --sheet: #1E1733;
-      --ink: #EEEAF8;
-      --muted: #B0A6C8;
-      --line: #382D55;
-      --accent: #BBA4FF;
-      --on-accent: #130E21;
-    }
+    --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+    --gutter: clamp(1rem, 5vw, 3rem);
   }
 
   *, *::before, *::after { box-sizing: border-box; }
-  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+  html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; background: var(--bg); }
   body {
     margin: 0;
-    background: var(--paper);
+    background: var(--bg);
     color: var(--ink);
-    font-family: var(--text);
+    font-family: var(--display);
     font-size: 1.0625rem;
-    line-height: 1.65;
+    line-height: 1.6;
+    overflow-x: hidden;
   }
-  h1, h2, h3 { font-family: var(--display); margin: 0; color: var(--ink); }
+  h1, h2, h3 { margin: 0; line-height: 1.05; }
   p { margin: 0 0 1rem; }
-  a {
-    color: var(--accent);
-    text-decoration: underline;
-    text-decoration-thickness: 0.08em;
-    text-underline-offset: 0.2em;
-  }
-  a:hover { text-decoration-thickness: 0.16em; }
-  :focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+  a { color: var(--lilac); text-underline-offset: 0.2em; text-decoration-thickness: 0.08em; }
+  a:hover { color: var(--pink); }
+  :focus-visible { outline: 2px solid var(--pink); outline-offset: 3px; border-radius: 2px; }
+  ::selection { background: var(--violet); color: #fff; }
+  [id] { scroll-margin-top: 5rem; }
+  .mono { font-family: var(--mono); }
+  .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
 
-  .skip {
-    position: absolute; left: -999px; top: 0.5rem;
-    background: var(--ink); color: var(--paper); padding: 0.5rem 0.9rem; z-index: 10;
+  /* Grain + glow */
+  body::before {
+    content: ""; position: fixed; inset: 0; z-index: 60; pointer-events: none; opacity: 0.07;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   }
+
+  .wrap { max-width: 74rem; margin-inline: auto; padding-inline: var(--gutter); }
+
+  .skip { position: absolute; left: -999px; top: 0.5rem; z-index: 100; background: var(--pink); color: var(--bg); padding: 0.5rem 0.9rem; }
   .skip:focus { left: 0.5rem; }
 
-  .wrap {
-    max-width: 66rem;
-    margin-inline: auto;
-    padding-inline: clamp(1.25rem, 5vw, 3rem);
+  /* Scroll progress */
+  .progress {
+    position: fixed; top: 0; left: 0; right: 0; height: 3px; z-index: 50;
+    background: linear-gradient(90deg, var(--violet), var(--pink));
+    transform-origin: 0 50%; transform: scaleX(0);
   }
 
   /* Header */
   .site-header {
-    padding-block: 1.25rem;
-    position: sticky; top: 0; z-index: 5;
-    background: var(--paper);
-    border-bottom: 1px solid transparent;
-    transition: border-color 0.2s ease;
+    position: sticky; top: 0; z-index: 40;
+    background: color-mix(in srgb, var(--bg) 82%, transparent);
+    backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--line);
   }
-  .site-header[data-scrolled="true"] { border-bottom-color: var(--line); }
-  [id] { scroll-margin-top: 4.5rem; }
-  .site-header .wrap {
-    display: flex; flex-wrap: wrap; align-items: baseline;
-    justify-content: space-between; gap: 0.75rem 2rem;
+  .site-header .wrap { display: flex; align-items: center; justify-content: space-between; gap: 0.75rem 2rem; flex-wrap: wrap; padding-block: 0.9rem; }
+  .logo { font-family: var(--mono); font-weight: 700; font-size: 0.95rem; color: var(--ink); text-decoration: none; white-space: nowrap; }
+  .logo b { color: var(--green); font-weight: 700; }
+  .logo i { color: var(--lilac); font-style: normal; }
+  .caret { display: inline-block; width: 0.55em; height: 1.05em; background: var(--pink); vertical-align: -0.15em; margin-left: 0.15em; animation: blink 1s steps(1) infinite; }
+  @keyframes blink { 50% { opacity: 0; } }
+  .site-nav { display: flex; flex-wrap: wrap; gap: 0.35rem 1.25rem; font-family: var(--mono); font-size: 0.875rem; }
+  .site-nav a { color: var(--muted); text-decoration: none; }
+  .site-nav a::before { content: "./"; color: var(--violet); }
+  .site-nav a:hover { color: var(--ink); }
+
+  /* Buttons */
+  .btn {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    font-family: var(--mono); font-weight: 500; font-size: 0.9375rem; line-height: 1.2;
+    padding: 0.8rem 1.15rem; border: 1px solid var(--line); border-radius: 999px;
+    background: var(--panel); color: var(--ink); text-decoration: none; cursor: pointer;
+    transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
   }
-  .site-name {
-    font-family: var(--display); font-weight: 700; font-size: 1.125rem;
-    color: var(--ink); text-decoration: none;
-  }
-  .site-nav { display: flex; flex-wrap: wrap; gap: 0.5rem 1.5rem; }
-  .site-nav a { font-family: var(--display); font-weight: 500; color: var(--ink); text-decoration: none; }
-  .site-nav a:hover { color: var(--accent); text-decoration: underline; text-underline-offset: 0.3em; }
+  .btn:hover { color: var(--ink); border-color: var(--lilac); transform: translateY(-2px); }
+  .btn-hot { background: linear-gradient(120deg, var(--violet), #C026D3); border-color: transparent; color: #fff; }
+  .btn-hot:hover { color: #fff; border-color: transparent; box-shadow: 0 10px 40px -10px var(--violet); }
 
   /* Hero */
-  .hero { padding-block: clamp(2.5rem, 7vw, 5rem) clamp(3rem, 7vw, 5rem); }
+  .hero { position: relative; isolation: isolate; overflow: hidden; border-bottom: 1px solid var(--line); }
+  .xray-back {
+    position: absolute; inset: 0; z-index: 0; padding: 1rem;
+    font-family: var(--mono); font-size: 15px; line-height: 1.5; letter-spacing: 0.08em;
+    color: var(--violet); word-break: break-all; overflow: hidden; user-select: none;
+  }
+  .xray-back em { color: var(--pink); font-style: normal; font-weight: 700; }
+  .xray-front {
+    position: relative; z-index: 1;
+    background:
+      radial-gradient(60rem 30rem at 85% 10%, rgba(139, 92, 246, 0.22), transparent 60%),
+      radial-gradient(40rem 26rem at 0% 100%, rgba(240, 171, 252, 0.12), transparent 60%),
+      var(--bg);
+    -webkit-mask-image: radial-gradient(circle var(--r) at var(--x, 50%) var(--y, 50%), transparent 98%, #000 100%);
+            mask-image: radial-gradient(circle var(--r) at var(--x, 50%) var(--y, 50%), transparent 98%, #000 100%);
+    transition: --r 0.35s ease;
+  }
+  .hero[data-lens="on"] .xray-front { --r: 130px; }
+  .lens {
+    position: absolute; z-index: 2; width: 260px; height: 260px; margin: -130px 0 0 -130px;
+    border: 1px solid var(--pink); border-radius: 50%; pointer-events: none;
+    left: var(--x, 50%); top: var(--y, 50%); opacity: 0; transform: scale(0.3);
+    transition: opacity 0.3s ease, transform 0.35s ease;
+    box-shadow: 0 0 0 1px rgba(240, 171, 252, 0.15), 0 0 60px rgba(240, 171, 252, 0.25) inset;
+  }
+  .lens::after {
+    content: "X-RAY"; position: absolute; top: -1.6rem; left: 50%; transform: translateX(-50%);
+    font-family: var(--mono); font-size: 0.7rem; letter-spacing: 0.2em; color: var(--pink);
+  }
+  .hero[data-lens="on"] .lens { opacity: 1; transform: scale(1); }
+  .hero-inner { min-height: min(92vh, 56rem); display: flex; flex-direction: column; justify-content: center; padding-block: clamp(3.5rem, 9vw, 7rem) clamp(3rem, 7vw, 5rem); }
+  .status {
+    display: flex; flex-wrap: wrap; gap: 0.4rem 1.25rem; margin-bottom: 1.75rem;
+    font-family: var(--mono); font-size: 0.8125rem; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em;
+  }
+  .status .dot { display: inline-block; width: 0.55rem; height: 0.55rem; border-radius: 50%; background: var(--green); margin-right: 0.45rem; box-shadow: 0 0 12px var(--green); animation: pulse 2s ease-in-out infinite; }
+  @keyframes pulse { 50% { opacity: 0.35; } }
   .hero h1 {
-    font-weight: 700;
-    font-size: clamp(2.6rem, 7.2vw, 5rem);
-    line-height: 1.02;
-    letter-spacing: -0.025em;
-    max-width: 18ch;
-    margin-bottom: 1.5rem;
+    font-weight: 800; font-size: clamp(2.75rem, 8.6vw, 8rem); letter-spacing: -0.035em; line-height: 0.95;
+    max-width: 13ch; margin-bottom: 1.75rem;
   }
-  .lede { max-width: 40rem; font-size: 1.1875rem; color: var(--ink); }
-  .glance {
-    display: flex; flex-wrap: wrap; gap: 0.5rem;
-    list-style: none; margin: 0 0 0.5rem; padding: 0;
+  .hero h1 .hl {
+    background: linear-gradient(100deg, var(--lilac), var(--pink));
+    -webkit-background-clip: text; background-clip: text; color: transparent;
   }
-  .glance li {
-    font-family: var(--display); font-weight: 500; font-size: 0.9375rem;
-    padding: 0.3rem 0.7rem;
-    border: 1px solid var(--line); border-radius: 999px;
-    background: var(--sheet);
-  }
+  .lede { max-width: 38rem; font-size: clamp(1.0625rem, 1.6vw, 1.25rem); color: var(--muted); }
+  .lede strong { color: var(--ink); font-weight: 600; }
+  .hero-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.25rem; }
+  .hint { margin-top: 2rem; font-family: var(--mono); font-size: 0.8125rem; color: var(--muted); }
+  .hint kbd { font-family: inherit; color: var(--pink); }
+  @media (hover: none), (pointer: coarse) { .hint-pointer { display: none; } }
 
-
-  .btn {
-    display: inline-block;
-    font-family: var(--display);
-    font-weight: 600;
-    font-size: 1rem;
-    line-height: 1.2;
-    padding: 0.75rem 1.15rem;
-    border: 2px solid var(--ink);
-    border-radius: 3px;
-    background: transparent;
-    color: var(--ink);
-    text-decoration: none;
-    cursor: pointer;
-  }
-  .btn:hover { background: var(--ink); color: var(--paper); text-decoration: none; }
-  .btn-solid { background: var(--ink); color: var(--paper); }
-  .btn-solid:hover { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+  /* Marquee */
+  .marquee { overflow: hidden; border-bottom: 1px solid var(--line); background: var(--bg-2); padding-block: 1rem; }
+  .marquee-track { display: flex; width: max-content; animation: marquee 38s linear infinite; }
+  .marquee:hover .marquee-track { animation-play-state: paused; }
+  .marquee ul { display: flex; list-style: none; margin: 0; padding: 0; }
+  .marquee li { font-family: var(--display); font-weight: 700; font-size: clamp(1.25rem, 2.6vw, 2rem); white-space: nowrap; padding-inline: 1.25rem; color: var(--ink); }
+  .marquee li:nth-child(3n+2) { color: transparent; -webkit-text-stroke: 1px var(--lilac); }
+  .marquee li::after { content: "✦"; color: var(--violet); margin-left: 2.5rem; font-size: 0.7em; vertical-align: 0.15em; }
+  @keyframes marquee { to { transform: translateX(-50%); } }
 
   /* Sections */
-  .section { border-top: 1px solid var(--line); padding-block: clamp(2.5rem, 6vw, 4rem); }
-  .section > .wrap {
-    display: grid;
-    grid-template-columns: 10rem minmax(0, 1fr);
-    gap: 1rem 2.5rem;
+  .section { padding-block: clamp(4rem, 10vw, 7.5rem); border-bottom: 1px solid var(--line); position: relative; }
+  .kicker { font-family: var(--mono); font-size: 0.8125rem; color: var(--lilac); letter-spacing: 0.08em; margin-bottom: 1rem; }
+  .kicker span { color: var(--muted); }
+  .title {
+    position: relative; display: inline-block;
+    font-weight: 800; font-size: clamp(2.25rem, 6vw, 4.75rem); letter-spacing: -0.03em; margin-bottom: clamp(2rem, 4vw, 3rem);
   }
-  .section h2 { font-size: 1.25rem; font-weight: 700; padding-top: 0.2rem; }
-  .section-body { max-width: 46rem; }
-  .section-body h3 { font-size: 1.625rem; font-weight: 700; line-height: 1.2; margin-bottom: 0.75rem; }
-  .section-body p, .section-body li { max-width: 62ch; }
-  .section-body .subhead { font-size: 1.25rem; margin: 2.5rem 0 0.5rem; }
-  .plain-list { margin: 0; padding-left: 1.1rem; }
-  .plain-list li { margin-bottom: 0.4rem; }
-
-  .facts {
-    display: grid;
-    grid-template-columns: 7.5rem minmax(0, 1fr);
-    gap: 0.25rem 1.5rem;
-    margin: 1.5rem 0;
+  .glitch:hover::before, .glitch:hover::after {
+    content: attr(data-text); position: absolute; inset: 0; pointer-events: none;
   }
-  .facts dt { font-family: var(--display); font-weight: 600; }
-  .facts dd { margin: 0 0 1.25rem; max-width: 62ch; }
+  .glitch:hover::before { color: var(--pink); transform: translate(3px, -2px); clip-path: inset(0 0 60% 0); animation: g1 0.35s steps(2) infinite; mix-blend-mode: screen; }
+  .glitch:hover::after { color: var(--green); transform: translate(-3px, 2px); clip-path: inset(55% 0 0 0); animation: g2 0.3s steps(2) infinite; mix-blend-mode: screen; }
+  @keyframes g1 { 50% { clip-path: inset(30% 0 35% 0); transform: translate(-4px, 1px); } }
+  @keyframes g2 { 50% { clip-path: inset(10% 0 70% 0); transform: translate(4px, -1px); } }
 
-  .job {
-    display: grid;
-    grid-template-columns: 8.5rem minmax(0, 1fr);
-    gap: 0.5rem 1.5rem;
-    padding-block: 1.75rem;
-    border-top: 1px solid var(--line);
-  }
-  .job:first-child { border-top: 0; padding-top: 0; }
-  .job-dates { margin: 0.35rem 0 0; font-size: 0.9375rem; color: var(--muted); font-variant-numeric: tabular-nums; }
-  .job h3 { font-size: 1.375rem; margin-bottom: 0; }
-  .job-role { color: var(--muted); margin-bottom: 0.75rem; }
-  .job ul { margin: 0 0 0.75rem; padding-left: 1.1rem; }
-  .job li { margin-bottom: 0.5rem; }
-  .stack { font-size: 0.9375rem; color: var(--muted); margin: 0; }
+  /* Stats */
+  .stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); margin-bottom: clamp(3rem, 6vw, 4.5rem); }
+  .stat { background: var(--bg); padding: 1.5rem 1.25rem; }
+  .stat b { display: block; font-size: clamp(2.5rem, 5vw, 3.75rem); font-weight: 800; letter-spacing: -0.03em; line-height: 1; margin-bottom: 0.5rem; background: linear-gradient(100deg, var(--ink), var(--lilac)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .stat span { font-family: var(--mono); font-size: 0.8125rem; color: var(--muted); }
 
-  .contact-links { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.25rem; }
+  /* Case file */
+  .case { border: 1px solid var(--line); background: linear-gradient(180deg, var(--panel), var(--bg-2)); border-radius: 18px; overflow: hidden; }
+  .case-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.75rem 2rem; padding: 1rem 1.5rem; border-bottom: 1px dashed var(--line); font-family: var(--mono); font-size: 0.8125rem; color: var(--muted); }
+  .stamp { color: var(--green); border: 1px solid var(--green); padding: 0.1rem 0.5rem; border-radius: 4px; letter-spacing: 0.12em; transform: rotate(-2deg); display: inline-block; }
+  .case-body { padding: clamp(1.5rem, 4vw, 2.5rem); }
+  .case h3 { font-size: clamp(1.75rem, 4vw, 2.75rem); font-weight: 800; letter-spacing: -0.02em; margin-bottom: 1rem; }
+  .case-intro { max-width: 46rem; color: var(--muted); font-size: 1.125rem; }
+  .tags { display: flex; flex-wrap: wrap; gap: 0.5rem; list-style: none; padding: 0; margin: 1.25rem 0 2rem; }
+  .tags li { font-family: var(--mono); font-size: 0.8125rem; padding: 0.3rem 0.7rem; border-radius: 999px; border: 1px solid var(--line); color: var(--lilac); }
+  .metrics { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; }
+  .metric { background: var(--bg); border: 1px solid var(--line); border-radius: 14px; padding: 1.25rem 1.25rem 1.1rem; }
+  .metric h4 { margin: 0 0 0.9rem; font-family: var(--mono); font-size: 0.8125rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--pink); }
+  .bar { margin-bottom: 0.8rem; }
+  .bar-label { display: flex; justify-content: space-between; gap: 1rem; font-family: var(--mono); font-size: 0.8125rem; color: var(--muted); margin-bottom: 0.3rem; }
+  .bar-label b { color: var(--ink); font-weight: 500; }
+  .bar-track { height: 8px; background: var(--panel-2); border-radius: 999px; overflow: hidden; }
+  .bar-fill { height: 100%; width: var(--v); background: linear-gradient(90deg, var(--violet), var(--pink)); border-radius: inherit; transition: width 1.2s cubic-bezier(0.2, 0.8, 0.2, 1); }
+  .bar-fill.bad { background: linear-gradient(90deg, #E11D48, var(--red)); }
+  html.js .metric:not(.in) .bar-fill { width: 0; }
+  .metric p { font-size: 0.9375rem; color: var(--muted); margin: 0.6rem 0 0; }
+  .case-foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem; margin-top: 1.75rem; }
+  .case-foot p { margin: 0; color: var(--muted); font-size: 0.9375rem; }
+  .repos { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; margin-top: 1.5rem; }
+  .repo { display: block; padding: 1.1rem 1.15rem; border: 1px solid var(--line); border-radius: 14px; background: var(--bg-2); text-decoration: none; color: var(--ink); transition: transform 0.2s ease, border-color 0.2s ease; }
+  .repo:hover { transform: translateY(-4px) rotate(-0.6deg); border-color: var(--lilac); color: var(--ink); }
+  .repo b { display: block; font-family: var(--mono); font-size: 0.9375rem; color: var(--lilac); margin-bottom: 0.35rem; }
+  .repo span { font-size: 0.9375rem; color: var(--muted); }
+  .subtitle { font-family: var(--mono); font-size: 0.875rem; color: var(--muted); margin-top: 3rem; }
 
-  .site-footer { border-top: 1px solid var(--line); padding-block: 1.75rem 3rem; color: var(--muted); font-size: 0.9375rem; }
-  .site-footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem 1.5rem; }
+  /* git log */
+  .gitlog { position: relative; list-style: none; margin: 0; padding: 0 0 0 2.25rem; }
+  .gitlog::before { content: ""; position: absolute; left: 0.55rem; top: 0.5rem; bottom: 0.5rem; width: 2px; background: linear-gradient(var(--pink), var(--violet) 60%, var(--line)); }
+  .commit { position: relative; padding-bottom: 2.25rem; }
+  .commit::before { content: ""; position: absolute; left: -2.1rem; top: 0.35rem; width: 0.95rem; height: 0.95rem; border-radius: 50%; background: var(--bg); border: 2px solid var(--lilac); }
+  .commit:first-child::before { background: var(--pink); border-color: var(--pink); box-shadow: 0 0 18px var(--pink); }
+  .commit-meta { font-family: var(--mono); font-size: 0.8125rem; color: var(--muted); display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; margin-bottom: 0.4rem; }
+  .commit-meta .hash { color: var(--amber); }
+  .commit-meta .ref { color: var(--green); }
+  .commit details { border: 1px solid var(--line); border-radius: 14px; background: var(--bg-2); }
+  .commit summary { list-style: none; cursor: pointer; padding: 1.1rem 1.25rem; display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0.25rem 1rem; }
+  .commit summary::-webkit-details-marker { display: none; }
+  .commit summary h3 { font-size: clamp(1.4rem, 3vw, 2rem); font-weight: 800; letter-spacing: -0.02em; }
+  .commit summary .role { font-family: var(--mono); font-size: 0.875rem; color: var(--lilac); }
+  .commit summary .role::after { content: " [+]"; color: var(--muted); }
+  .commit details[open] summary .role::after { content: " [−]"; }
+  .commit-body { padding: 0 1.25rem 1.25rem; }
+  .commit-body ul { margin: 0 0 1rem; padding-left: 1.1rem; color: var(--muted); }
+  .commit-body li { margin-bottom: 0.5rem; max-width: 64ch; }
+  .commit-body li::marker { color: var(--violet); content: "+ "; font-family: var(--mono); }
+  .stack { font-family: var(--mono); font-size: 0.8125rem; color: var(--lilac); margin: 0; }
+  .commit.init h3 { font-size: 1.25rem; }
+  .commit.init .commit-meta { margin: 0; }
+
+  /* nmap */
+  .scan { border: 1px solid var(--line); border-radius: 14px; background: #07050D; font-family: var(--mono); font-size: 0.875rem; overflow: hidden; }
+  .scan-bar, .term-bar { display: flex; align-items: center; gap: 0.45rem; padding: 0.7rem 1rem; border-bottom: 1px solid var(--line); background: var(--panel); color: var(--muted); font-size: 0.8125rem; }
+  .scan-bar i, .term-bar i { width: 0.7rem; height: 0.7rem; border-radius: 50%; background: var(--line); }
+  .scan-bar i:nth-child(1), .term-bar i:nth-child(1) { background: var(--red); }
+  .scan-bar i:nth-child(2), .term-bar i:nth-child(2) { background: var(--amber); }
+  .scan-bar i:nth-child(3), .term-bar i:nth-child(3) { background: var(--green); }
+  .scan-bar span, .term-bar span { margin-left: 0.5rem; }
+  .scan-body { padding: 1.25rem; }
+  .scan-line { margin: 0 0 0.3rem; color: var(--muted); }
+  .scan-line .cmd { color: var(--ink); }
+  .scan-line .ps { color: var(--green); }
+  .ports { width: 100%; border-collapse: collapse; margin: 0.75rem 0; }
+  .ports th { text-align: left; font-weight: 500; color: var(--muted); padding: 0.35rem 1rem 0.35rem 0; border-bottom: 1px dashed var(--line); }
+  .ports td { padding: 0.45rem 1rem 0.45rem 0; vertical-align: top; color: var(--ink); }
+  .ports td:nth-child(1) { color: var(--amber); white-space: nowrap; }
+  .ports td:nth-child(2) { color: var(--green); }
+  .ports td:nth-child(3) { color: var(--pink); white-space: nowrap; }
+  html.js .scan:not(.in) .typed { opacity: 0; }
+  .typed { transition: opacity 0.15s ease; }
+
+  .creds { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 1rem; margin-top: 2.5rem; }
+  .cred { border: 1px solid var(--line); border-radius: 14px; padding: 1.1rem 1.15rem; background: var(--bg-2); }
+  .cred .when { font-family: var(--mono); font-size: 0.75rem; color: var(--amber); }
+  .cred b { display: block; font-size: 1.0625rem; line-height: 1.25; margin: 0.4rem 0 0.25rem; }
+  .cred span { font-size: 0.875rem; color: var(--muted); }
+  .langs { margin-top: 1.25rem; font-family: var(--mono); font-size: 0.875rem; color: var(--muted); }
+  .langs b { color: var(--ink); font-weight: 500; }
+
+  /* Terminal */
+  .term-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); gap: 2rem; align-items: start; }
+  .term-copy p { color: var(--muted); }
+  .chips { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1rem; }
+  .chip { font-family: var(--mono); font-size: 0.8125rem; padding: 0.4rem 0.75rem; border-radius: 999px; border: 1px solid var(--line); background: var(--panel); color: var(--lilac); cursor: pointer; }
+  .chip:hover { border-color: var(--lilac); color: var(--ink); }
+  .term { border: 1px solid var(--line); border-radius: 14px; background: #07050D; font-family: var(--mono); font-size: 0.875rem; overflow: hidden; box-shadow: 0 30px 80px -40px var(--violet); }
+  .term-out { height: 22rem; overflow-y: auto; padding: 1rem 1.15rem 0.25rem; white-space: pre-wrap; word-break: break-word; }
+  .term-out p { margin: 0 0 0.2rem; color: var(--ink); }
+  .term-out .dim { color: var(--muted); }
+  .term-out .ok { color: var(--green); }
+  .term-out .warn { color: var(--amber); }
+  .term-out .err { color: var(--red); }
+  .term-out .acc { color: var(--pink); }
+  .term-out .echo { color: var(--lilac); }
+  .term-in { display: flex; align-items: center; gap: 0.6rem; padding: 0.4rem 1.15rem 1rem; }
+  .term-in label { color: var(--green); white-space: nowrap; }
+  .term-in input { flex: 1; min-width: 0; background: transparent; border: 0; color: var(--ink); font: inherit; caret-color: var(--pink); padding: 0.25rem 0; }
+  .term-in input:focus { outline: none; }
+  .term:focus-within { border-color: var(--violet); }
+
+  /* CTF */
+  .ctf { border: 1px dashed var(--violet); border-radius: 18px; padding: clamp(1.5rem, 4vw, 2.5rem); background: repeating-linear-gradient(-45deg, transparent 0 14px, rgba(139, 92, 246, 0.05) 14px 28px); }
+  .ctf ol { margin: 1rem 0 1.5rem; padding-left: 1.25rem; color: var(--muted); }
+  .ctf li { margin-bottom: 0.35rem; }
+  .ctf li::marker { font-family: var(--mono); color: var(--pink); }
+  .ctf form { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+  .ctf input { flex: 1 1 16rem; min-width: 0; font-family: var(--mono); font-size: 1rem; padding: 0.8rem 1rem; border-radius: 999px; border: 1px solid var(--line); background: var(--bg); color: var(--ink); }
+  .ctf input:focus { outline: none; border-color: var(--pink); }
+  .ctf-result { font-family: var(--mono); margin: 1rem 0 0; min-height: 1.5em; }
+  .ctf-result.ok { color: var(--green); }
+  .ctf-result.err { color: var(--red); }
+  body.pwned { animation: pwned 0.7s steps(4) 1; }
+  @keyframes pwned { 25% { filter: hue-rotate(90deg) invert(0.1); transform: translateX(-4px); } 50% { filter: hue-rotate(-90deg); transform: translateX(4px); } 75% { filter: none; transform: translateX(-2px); } }
+  .spark { position: fixed; z-index: 90; pointer-events: none; font-family: var(--mono); font-weight: 700; color: var(--pink); }
+
+  /* Now */
+  .now-list { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1rem; list-style: none; padding: 0; margin: 0; }
+  .now-list li { border-top: 2px solid var(--violet); padding-top: 1rem; color: var(--muted); }
+  .now-list b { display: block; color: var(--ink); font-size: 1.25rem; margin-bottom: 0.35rem; }
+
+  /* Contact */
+  .contact { text-align: left; }
+  .contact .title { font-size: clamp(2.75rem, 10vw, 9rem); line-height: 0.92; max-width: 11ch; }
+  .contact p { color: var(--muted); max-width: 38rem; font-size: 1.125rem; }
+  .contact-links { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1.5rem; }
+
+  .site-footer { padding-block: 2rem 3rem; color: var(--muted); font-family: var(--mono); font-size: 0.8125rem; }
+  .site-footer .wrap { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.75rem 1.5rem; }
   .site-footer p { margin: 0; }
   .site-footer nav { display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; }
   .site-footer a { color: var(--muted); }
-  .site-footer a:hover { color: var(--accent); }
+  .site-footer a:hover { color: var(--pink); }
 
-  @media (max-width: 760px) {
-    .section > .wrap { grid-template-columns: minmax(0, 1fr); }
-    .facts { grid-template-columns: minmax(0, 1fr); gap: 0; }
-    .facts dt { margin-top: 0.25rem; }
-    .job { grid-template-columns: minmax(0, 1fr); }
-    .job-dates { margin-top: 0; }
+  /* Reveal */
+  html.js .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s cubic-bezier(0.2, 0.8, 0.2, 1); }
+  html.js .reveal.in { opacity: 1; transform: none; }
+
+  /* Boot */
+  .boot { position: fixed; inset: 0; z-index: 95; background: var(--bg); display: flex; align-items: flex-end; padding: var(--gutter); font-family: var(--mono); font-size: 0.875rem; color: var(--muted); transition: opacity 0.45s ease, visibility 0.45s; }
+  .boot.done { opacity: 0; visibility: hidden; }
+  .boot p { margin: 0 0 0.25rem; }
+  .boot .ok { color: var(--green); }
+  .boot .warn { color: var(--amber); }
+  .boot small { display: block; margin-top: 1rem; opacity: 0.6; }
+
+  /* Cursor */
+  .cursor, .cursor-ring { position: fixed; top: 0; left: 0; z-index: 99; pointer-events: none; border-radius: 50%; display: none; }
+  .cursor { width: 6px; height: 6px; margin: -3px 0 0 -3px; background: var(--pink); }
+  .cursor-ring { width: 34px; height: 34px; margin: -17px 0 0 -17px; border: 1px solid var(--lilac); transition: width 0.2s ease, height 0.2s ease, margin 0.2s ease, background 0.2s ease; }
+  .cursor-ring.big { width: 64px; height: 64px; margin: -32px 0 0 -32px; background: rgba(240, 171, 252, 0.1); }
+  @media (hover: hover) and (pointer: fine) and (prefers-reduced-motion: no-preference) {
+    html.js.has-cursor .cursor, html.js.has-cursor .cursor-ring { display: block; }
   }
-  @media (max-width: 760px) {
-    .site-header { position: static; }
+
+  @media (max-width: 980px) {
+    .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .repos, .creds { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .term-grid { grid-template-columns: minmax(0, 1fr); }
   }
-  @media print {
-    :root { --paper: #fff; --sheet: #fff; --ink: #000; --muted: #333; --line: #bbb; --accent: #000; }
-    .site-header nav, .skip, .site-footer nav { display: none !important; }
+  @media (max-width: 680px) {
     .site-header { position: static; }
-    .section { break-inside: avoid-page; padding-block: 1.25rem; }
-    .job { break-inside: avoid; }
-    a { color: inherit; }
+    .metrics, .repos, .creds, .now-list { grid-template-columns: minmax(0, 1fr); }
+    .ports thead { display: none; }
+    .ports tr { display: grid; grid-template-columns: auto auto 1fr; gap: 0 0.75rem; padding: 0.5rem 0; border-bottom: 1px dashed var(--line); }
+    .ports td { padding: 0; }
+    .ports td:nth-child(4) { grid-column: 1 / -1; color: var(--muted); }
+    .term-out { height: 18rem; }
+    .xray-back { font-size: 13px; }
   }
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
-    *, *::before, *::after { transition: none !important; }
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+    html.js .reveal { opacity: 1; transform: none; }
+    html.js .metric:not(.in) .bar-fill { width: var(--v); }
+    html.js .scan:not(.in) .typed { opacity: 1; }
+  }
+  @media print {
+    :root { --bg: #fff; --bg-2: #fff; --panel: #fff; --panel-2: #eee; --ink: #000; --muted: #333; --line: #bbb; --lilac: #000; --pink: #000; --violet: #000; --green: #000; --amber: #000; }
+    body::before, .progress, .site-nav, .marquee, .xray-back, .lens, .hero-actions, .hint, #shell, #ctf, .cursor, .cursor-ring, .boot, .site-footer nav { display: none !important; }
+    .site-header { position: static; backdrop-filter: none; }
+    .xray-front { -webkit-mask-image: none; mask-image: none; background: #fff; }
+    .hero h1 .hl, .stat b { color: #000; background: none; }
+    html.js .reveal { opacity: 1; transform: none; }
+    .hero-inner { min-height: 0; }
+    .scan { background: #fff; }
+    .section { break-inside: avoid-page; padding-block: 1.5rem; }
   }
 </style>
 </head>
 <body id="top">
+<!--
+  Hey, you're reading the source. Good instinct.
+  flag part 1/3: SQ{h1r3_
+-->
 <a class="skip" href="#main">Skip to content</a>
+<div class="progress" aria-hidden="true"></div>
 
 <header class="site-header">
   <div class="wrap">
-    <a class="site-name" href="#top">Sebastián Quesada Calderón</a>
+    <a class="logo" href="#top" aria-label="Sebastián Quesada Calderón, back to top"><b>sebas</b>@<i>ibm</i>:~$<span class="caret" aria-hidden="true"></span></a>
     <nav class="site-nav" aria-label="Main">
-      <a href="#project">Project</a>
-      <a href="#experience">Experience</a>
-      <a href="#skills">Skills</a>
-      <a href="#now">Now</a>
-      <a href="#contact">Contact</a>
-      <a href="CV.pdf">CV</a>
+      <a href="#case">case</a>
+      <a href="#log">log</a>
+      <a href="#scan">scan</a>
+      <a href="#shell">shell</a>
+      <a href="#ctf">ctf</a>
+      <a href="#contact">contact</a>
+      <a href="CV.pdf">cv.pdf</a>
     </nav>
   </div>
 </header>
 
 <main id="main">
-  <section class="hero" aria-labelledby="hero-title">
-    <div class="wrap">
-      <h1 id="hero-title">Senior software engineer building secure web and AI systems.</h1>
-      <p class="lede">I'm a Costa Rican senior software engineer at IBM. I've been shipping React, React Native, and Node.js products for US and international companies since 2020, and I'm now moving into AI and offensive security.</p>
-      <ul class="glance" aria-label="At a glance">
-        <li>6+ years building web platforms</li>
-        <li>Senior Software Engineer at IBM</li>
-        <li>CEH certified</li>
-        <li>Master's in Cybersecurity, TEC</li>
-      </ul>
+  <section class="hero" id="hero" aria-labelledby="hero-title">
+    <div class="xray-back" aria-hidden="true"></div>
+    <div class="xray-front">
+      <div class="wrap hero-inner">
+        <p class="status"><span><span class="dot" aria-hidden="true"></span>Open to remote roles</span><span>San José, CR</span><span class="mono" id="clock" aria-label="Local time in Costa Rica">--:--:--</span></p>
+        <h1 id="hero-title" data-decrypt>Senior software engineer building <span class="hl">secure</span> web and AI systems.</h1>
+        <p class="lede">I'm Sebastián Quesada, a Costa Rican <strong>senior software engineer at IBM</strong>. I've been shipping React, React Native, and Node.js products for US and international companies since 2020, and I'm now moving into <strong>AI and offensive security</strong>.</p>
+        <div class="hero-actions">
+          <a class="btn btn-hot" href="#case">Open the case file ↓</a>
+          <a class="btn" href="#shell">&gt;_ Try the shell</a>
+          <a class="btn" href="CV.pdf">Download CV</a>
+        </div>
+        <p class="hint"><span class="hint-pointer">Move your cursor over this area to x-ray it. </span>There's a flag hidden on this site. <a href="#ctf">Rules ↓</a></p>
+      </div>
     </div>
+    <div class="lens" aria-hidden="true"></div>
   </section>
 
-  <section class="section" id="project" aria-labelledby="project-title">
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <ul><li>React</li><li>TypeScript</li><li>Node.js</li><li>React Native</li><li>AWS Lambda</li><li>Terraform</li><li>Python</li><li>watsonx.ai</li><li>RAG</li><li>Prompt injection</li><li>CEH</li><li>Kali Linux</li><li>PostgreSQL</li><li>MongoDB</li></ul>
+      <ul><li>React</li><li>TypeScript</li><li>Node.js</li><li>React Native</li><li>AWS Lambda</li><li>Terraform</li><li>Python</li><li>watsonx.ai</li><li>RAG</li><li>Prompt injection</li><li>CEH</li><li>Kali Linux</li><li>PostgreSQL</li><li>MongoDB</li></ul>
+    </div>
+  </div>
+
+  <section class="section" id="case" aria-labelledby="case-title">
     <div class="wrap">
-      <h2 id="project-title">Project</h2>
-      <div class="section-body">
-        <h3>RAG Security Assistant</h3>
-        <p>A local RAG pipeline over OWASP and NIST security documents, built with ChromaDB, Ollama, and Llama 3.2 3B. I evaluated retrieval, attacked it with prompt injection, defended it, and published the limitations next to the numbers.</p>
-        <dl class="facts">
-          <dt>Retrieval</dt>
-          <dd>Tested on 18 questions I checked against the source text. The right document appeared in the top 4 results 94% of the time with English embeddings and 100% with multilingual embeddings. That is a one-question difference, so I treat it as a signal, not proof.</dd>
-          <dt>Attack</dt>
-          <dd>One poisoned document with one injected sentence. With a naive prompt, the model repeated the injected domain in 4 of 5 runs. A hardened prompt did not clearly help (3 of 5).</dd>
-          <dt>Defense</dt>
-          <dd>An output filter with a domain allowlist blocked 3 of 10 responses that mentioned the unapproved domain. It only covers this kind of attack, and it blocks the whole answer.</dd>
-          <dt>Agents</dt>
-          <dd>A free tool-calling agent produced 0 of 10 valid reports. A plan-and-execute version that validates citations produced valid reports in 9 of 10 and 7 of 10 runs. Retries did most of the work: in the second run, 3 of 10 were valid on the first attempt.</dd>
-        </dl>
-        <p>These are small samples from a single 3B model. The README lists every limitation.</p>
-        <p><a class="btn" href="https://github.com/MrDavidson23/rag-security">Read the code and README on GitHub</a></p>
-        <h3 class="subhead">More on GitHub</h3>
-        <ul class="plain-list">
-          <li><a href="https://github.com/MrDavidson23/make-my-curriculum">make-my-curriculum</a>: resume generator (JavaScript).</li>
-          <li><a href="https://github.com/MrDavidson23/web-jobs-nodejs">web-jobs-nodejs</a>: web app to post and apply for jobs (Node.js).</li>
-          <li><a href="https://github.com/MrDavidson23/groot">groot</a>: systems programming project (C).</li>
-          <li><a href="https://github.com/MrDavidson23/pet-app">pet-app</a>: pet management app (Ruby).</li>
-        </ul>
+      <div class="stats reveal" role="list">
+        <div class="stat" role="listitem"><b data-count="6" data-suffix="+">6+</b><span>years building web platforms</span></div>
+        <div class="stat" role="listitem"><b data-count="3">3</b><span>companies shipped for</span></div>
+        <div class="stat" role="listitem"><b data-count="55">55</b><span>people using my IBM squad's platform</span></div>
+        <div class="stat" role="listitem"><b>CEH</b><span>certified ethical hacker</span></div>
+      </div>
+
+      <p class="kicker">01 <span>// case_file</span></p>
+      <h2 class="title glitch" id="case-title" data-text="I break what I build.">I break what I build.</h2>
+
+      <article class="case reveal">
+        <div class="case-head"><span>CASE #001 · AI SECURITY</span><span class="stamp">DISCLOSED</span></div>
+        <div class="case-body">
+          <h3>RAG Security Assistant</h3>
+          <p class="case-intro">A local RAG pipeline over OWASP and NIST security documents. I evaluated retrieval, attacked it with prompt injection, defended it, and published the limitations next to the numbers.</p>
+          <ul class="tags" aria-label="Stack"><li>ChromaDB</li><li>Ollama</li><li>Llama 3.2 3B</li><li>Python</li></ul>
+
+          <div class="metrics">
+            <div class="metric reveal">
+              <h4>Retrieval</h4>
+              <div class="bar"><div class="bar-label"><span>English embeddings, right doc in top 4</span><b>94%</b></div><div class="bar-track"><div class="bar-fill" style="--v:94%"></div></div></div>
+              <div class="bar"><div class="bar-label"><span>Multilingual embeddings</span><b>100%</b></div><div class="bar-track"><div class="bar-fill" style="--v:100%"></div></div></div>
+              <p>18 questions checked against the source text. That's a one-question difference, so I treat it as a signal, not proof.</p>
+            </div>
+            <div class="metric reveal">
+              <h4>Attack</h4>
+              <div class="bar"><div class="bar-label"><span>Injection succeeded, naive prompt</span><b>4 / 5</b></div><div class="bar-track"><div class="bar-fill bad" style="--v:80%"></div></div></div>
+              <div class="bar"><div class="bar-label"><span>Injection succeeded, hardened prompt</span><b>3 / 5</b></div><div class="bar-track"><div class="bar-fill bad" style="--v:60%"></div></div></div>
+              <p>One poisoned document with one injected sentence. A hardened prompt did not clearly help.</p>
+            </div>
+            <div class="metric reveal">
+              <h4>Defense</h4>
+              <div class="bar"><div class="bar-label"><span>Bad responses blocked by output filter</span><b>3 / 10</b></div><div class="bar-track"><div class="bar-fill" style="--v:30%"></div></div></div>
+              <p>A domain allowlist on the output. It only covers this kind of attack, and it blocks the whole answer.</p>
+            </div>
+            <div class="metric reveal">
+              <h4>Agents</h4>
+              <div class="bar"><div class="bar-label"><span>Free tool-calling agent, valid reports</span><b>0 / 10</b></div><div class="bar-track"><div class="bar-fill bad" style="--v:2%"></div></div></div>
+              <div class="bar"><div class="bar-label"><span>Plan-and-execute, run 1</span><b>9 / 10</b></div><div class="bar-track"><div class="bar-fill" style="--v:90%"></div></div></div>
+              <div class="bar"><div class="bar-label"><span>Plan-and-execute, run 2</span><b>7 / 10</b></div><div class="bar-track"><div class="bar-fill" style="--v:70%"></div></div></div>
+              <p>Citation validation plus retries did most of the work: in run 2, only 3 of 10 were valid on the first attempt.</p>
+            </div>
+          </div>
+
+          <div class="case-foot">
+            <p>Small samples from a single 3B model. The README lists every limitation.</p>
+            <a class="btn btn-hot" href="https://github.com/MrDavidson23/rag-security">Read the full report on GitHub ↗</a>
+          </div>
+        </div>
+      </article>
+
+      <p class="subtitle">// more on github</p>
+      <div class="repos">
+        <a class="repo reveal" href="https://github.com/MrDavidson23/make-my-curriculum"><b>make-my-curriculum</b><span>Resume generator. JavaScript.</span></a>
+        <a class="repo reveal" href="https://github.com/MrDavidson23/web-jobs-nodejs"><b>web-jobs-nodejs</b><span>Post and apply for jobs. Node.js.</span></a>
+        <a class="repo reveal" href="https://github.com/MrDavidson23/groot"><b>groot</b><span>Systems programming project. C.</span></a>
+        <a class="repo reveal" href="https://github.com/MrDavidson23/pet-app"><b>pet-app</b><span>Pet management app. Ruby.</span></a>
       </div>
     </div>
   </section>
 
-  <section class="section" id="experience" aria-labelledby="experience-title">
+  <section class="section" id="log" aria-labelledby="log-title">
     <div class="wrap">
-      <h2 id="experience-title">Experience</h2>
-      <div class="section-body">
-        <article class="job">
-          <p class="job-dates">Jan 2023 to Present</p>
-          <div>
-            <h3>IBM</h3>
-            <p class="job-role">Senior Software Engineer, Costa Rica (hybrid)</p>
-            <ul>
-              <li>On a watsonx.ai project for an internal fraud-detection platform, my team built a Q&amp;A assistant and connected it through APIs to a supervised model, trained on historical fraud and not-fraud cases, that gives each new case a fraud-likelihood percentage.</li>
-              <li>Prepared datasets and cleaned and normalized text data for that model over about 18 months.</li>
-              <li>Work in a 21-person Agile squad, building React frontends and Node.js services used by a 55-person internal team.</li>
-              <li>Design and consume REST APIs for production systems, automate testing and deployment, and run services on IBM Cloud.</li>
-            </ul>
-            <p class="stack">React, Node.js, TypeScript, IBM Cloud, PostgreSQL, watsonx.ai</p>
+      <p class="kicker">02 <span>// git log --graph --career</span></p>
+      <h2 class="title glitch" id="log-title" data-text="Six years of commits.">Six years of commits.</h2>
+
+      <ol class="gitlog">
+        <li class="commit reveal">
+          <p class="commit-meta"><span class="hash">a3f9c1e</span><span class="ref">(HEAD -&gt; main)</span><span>Jan 2023 → present</span></p>
+          <details open>
+            <summary><h3>IBM</h3><span class="role">Senior Software Engineer · Costa Rica (hybrid)</span></summary>
+            <div class="commit-body">
+              <ul>
+                <li>On a watsonx.ai project for an internal fraud-detection platform, my team built a Q&amp;A assistant and connected it through APIs to a supervised model, trained on historical fraud and not-fraud cases, that gives each new case a fraud-likelihood percentage.</li>
+                <li>Prepared datasets and cleaned and normalized text data for that model over about 18 months.</li>
+                <li>Work in a 21-person Agile squad, building React frontends and Node.js services used by a 55-person internal team.</li>
+                <li>Design and consume REST APIs for production systems, automate testing and deployment, and run services on IBM Cloud.</li>
+              </ul>
+              <p class="stack">React · Node.js · TypeScript · IBM Cloud · PostgreSQL · watsonx.ai</p>
+            </div>
+          </details>
+        </li>
+        <li class="commit reveal">
+          <p class="commit-meta"><span class="hash">7b21d04</span><span>Feb 2022 → Jan 2023</span></p>
+          <details open>
+            <summary><h3>First Factory</h3><span class="role">Software Engineer · remote</span></summary>
+            <div class="commit-body">
+              <ul>
+                <li>Built a marketing analytics dashboard from scratch over 3 months, giving leadership visibility into SMS, voice, and email campaign performance.</li>
+                <li>Integrated third-party messaging APIs to bring multi-channel data into a single reporting view.</li>
+                <li>Worked in a 10-person cross-functional team, with code reviews and production deployments.</li>
+              </ul>
+              <p class="stack">React · Node.js · NestJS · Python · AWS Lambda · Terraform · PostgreSQL</p>
+            </div>
+          </details>
+        </li>
+        <li class="commit reveal">
+          <p class="commit-meta"><span class="hash">1e0c5a9</span><span>Jan 2020 → Jan 2022</span></p>
+          <details open>
+            <summary><h3>Pancake</h3><span class="role">Software Engineer · remote</span></summary>
+            <div class="commit-body">
+              <ul>
+                <li>Built serverless backend services on AWS (Lambda, DynamoDB) for a client-facing app and an internal management and design platform.</li>
+                <li>Owned backend architecture end to end in a two-person engineering team.</li>
+                <li>Built web applications with React and Next.js.</li>
+              </ul>
+              <p class="stack">React · Next.js · Node.js · AWS Lambda · DynamoDB</p>
+            </div>
+          </details>
+        </li>
+        <li class="commit init reveal">
+          <p class="commit-meta"><span class="hash">0000001</span><span>age 15</span><span>init: wrote my first line of code</span></p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="section" id="scan" aria-labelledby="scan-title">
+    <div class="wrap">
+      <p class="kicker">03 <span>// nmap -sV sebas</span></p>
+      <h2 class="title glitch" id="scan-title" data-text="Open ports.">Open ports.</h2>
+
+      <div class="scan reveal">
+        <div class="scan-bar" aria-hidden="true"><i></i><i></i><i></i><span>scan — skills</span></div>
+        <div class="scan-body">
+          <p class="scan-line typed"><span class="ps">$</span> <span class="cmd">nmap -sV sebas.quesada</span></p>
+          <p class="scan-line typed">Starting Nmap … host is up (0.0004s latency).</p>
+          <table class="ports">
+            <caption class="sr-only">Skills, grouped by area</caption>
+            <thead class="typed"><tr><th scope="col">PORT</th><th scope="col">STATE</th><th scope="col">SERVICE</th><th scope="col">VERSION</th></tr></thead>
+            <tbody>
+              <tr class="typed"><td>443/tcp</td><td>open</td><td>web</td><td>JavaScript, TypeScript, React, React Native, Next.js, Tailwind</td></tr>
+              <tr class="typed"><td>3000/tcp</td><td>open</td><td>node</td><td>Node.js, Express, NestJS, REST APIs, GraphQL</td></tr>
+              <tr class="typed"><td>8888/tcp</td><td>open</td><td>data-ai</td><td>Python, SQL, Snowflake, ETL, IBM watsonx.ai, RAG with ChromaDB and Ollama, retrieval and agent evaluation</td></tr>
+              <tr class="typed"><td>5432/tcp</td><td>open</td><td>databases</td><td>PostgreSQL, MongoDB, DynamoDB, MySQL</td></tr>
+              <tr class="typed"><td>8080/tcp</td><td>open</td><td>cloud</td><td>AWS serverless (Lambda, DynamoDB), IBM Cloud, Terraform, GitHub Actions, CI/CD, Git</td></tr>
+              <tr class="typed"><td>1337/tcp</td><td>open</td><td>security</td><td>LLM security (prompt injection, output filtering), ethical hacking (CEH), Kali Linux, C for systems work</td></tr>
+              <tr class="typed"><td>9000/tcp</td><td>open</td><td>practices</td><td>Agile and Scrum, API design, code reviews</td></tr>
+            </tbody>
+          </table>
+          <p class="scan-line typed">Nmap done: 1 engineer scanned, 7 services open, 0 filtered.</p>
+        </div>
+      </div>
+
+      <div class="creds">
+        <div class="cred reveal"><span class="when">2026 → now</span><b>Master's in Cybersecurity</b><span>Tecnológico de Costa Rica (TEC)</span></div>
+        <div class="cred reveal"><span class="when">2019 → 2022</span><b>BSc in Computer Science</b><span>Tecnológico de Costa Rica (TEC)</span></div>
+        <div class="cred reveal"><span class="when">Sept 2024</span><b>Certified Ethical Hacker (CEH)</b><span>Universidad Cenfotec</span></div>
+        <div class="cred reveal"><span class="when">Aug 2024</span><b>Scrum Master</b><span>Universidad Cenfotec</span></div>
+      </div>
+      <p class="langs">locale: <b>English (C2)</b> · <b>Spanish (native)</b></p>
+    </div>
+  </section>
+
+  <section class="section" id="shell" aria-labelledby="shell-title">
+    <div class="wrap">
+      <p class="kicker">04 <span>// ssh guest@sebas</span></p>
+      <h2 class="title glitch" id="shell-title" data-text="Poke around.">Poke around.</h2>
+      <div class="term-grid">
+        <div class="term-copy">
+          <p>A tiny shell with my résumé inside. Type <span class="mono">help</span> to see commands, or tap one below. Arrow keys browse history.</p>
+          <div class="chips" aria-label="Example commands">
+            <button class="chip" type="button" data-cmd="help">help</button>
+            <button class="chip" type="button" data-cmd="whoami">whoami</button>
+            <button class="chip" type="button" data-cmd="ls -a">ls -a</button>
+            <button class="chip" type="button" data-cmd="cat experience.log">cat experience.log</button>
+            <button class="chip" type="button" data-cmd="sudo hire-me">sudo hire-me</button>
           </div>
-        </article>
-        <article class="job">
-          <p class="job-dates">Feb 2022 to Jan 2023</p>
-          <div>
-            <h3>First Factory</h3>
-            <p class="job-role">Software Engineer, remote</p>
-            <ul>
-              <li>Built a marketing analytics dashboard from scratch over 3 months, giving leadership visibility into SMS, voice, and email campaign performance.</li>
-              <li>Integrated third-party messaging APIs to bring multi-channel data into a single reporting view.</li>
-              <li>Worked in a 10-person cross-functional team, with code reviews and production deployments.</li>
-            </ul>
-            <p class="stack">React, Node.js, NestJS, Python, AWS Lambda, Terraform, PostgreSQL</p>
-          </div>
-        </article>
-        <article class="job">
-          <p class="job-dates">Jan 2020 to Jan 2022</p>
-          <div>
-            <h3>Pancake</h3>
-            <p class="job-role">Software Engineer, remote</p>
-            <ul>
-              <li>Built serverless backend services on AWS (Lambda, DynamoDB) for a client-facing app and an internal management and design platform.</li>
-              <li>Owned backend architecture end to end in a two-person engineering team.</li>
-              <li>Built web applications with React and Next.js.</li>
-            </ul>
-            <p class="stack">React, Next.js, Node.js, AWS Lambda, DynamoDB</p>
-          </div>
-        </article>
+        </div>
+        <div class="term">
+          <div class="term-bar" aria-hidden="true"><i></i><i></i><i></i><span>guest@sebas: ~</span></div>
+          <div class="term-out" id="term-out" role="log" aria-live="polite" aria-label="Terminal output"></div>
+          <form class="term-in" id="term-form" autocomplete="off">
+            <label for="term-input">guest@sebas:~$</label>
+            <input id="term-input" type="text" spellcheck="false" autocapitalize="off" autocorrect="off" enterkeyhint="send">
+          </form>
+        </div>
       </div>
     </div>
   </section>
 
-  <section class="section" id="skills" aria-labelledby="skills-title">
+  <section class="section" id="ctf" aria-labelledby="ctf-title">
     <div class="wrap">
-      <h2 id="skills-title">Skills</h2>
-      <div class="section-body">
-        <dl class="facts" style="margin-top:0">
-          <dt>Web</dt>
-          <dd>JavaScript, TypeScript, React, React Native, Next.js, Tailwind, Node.js, Express, NestJS, REST APIs, GraphQL</dd>
-          <dt>Data and AI</dt>
-          <dd>Python, SQL, Snowflake, ETL, IBM watsonx.ai, RAG with ChromaDB and Ollama, retrieval and agent evaluation</dd>
-          <dt>Cloud</dt>
-          <dd>AWS serverless (Lambda, DynamoDB), IBM Cloud, Terraform, GitHub Actions, CI/CD, Git</dd>
-          <dt>Databases</dt>
-          <dd>PostgreSQL, MongoDB, DynamoDB, MySQL</dd>
-          <dt>Security</dt>
-          <dd>LLM security (prompt injection, output filtering), ethical hacking (CEH), Kali Linux, offensive-security and data analysis for cybersecurity coursework, C for systems work</dd>
-          <dt>Practices</dt>
-          <dd>Agile and Scrum, API design, code reviews</dd>
-        </dl>
-        <h3 class="subhead">Education and certifications</h3>
-        <dl class="facts" style="margin-bottom:0">
-          <dt>2026 to now</dt>
-          <dd>Master's in Cybersecurity, Tecnológico de Costa Rica (TEC)</dd>
-          <dt>2019 to 2022</dt>
-          <dd>BSc in Computer Science, Tecnológico de Costa Rica (TEC)</dd>
-          <dt>Sept 2024</dt>
-          <dd>Certified Ethical Hacker (CEH), Universidad Cenfotec</dd>
-          <dt>Aug 2024</dt>
-          <dd>Scrum Master, Universidad Cenfotec</dd>
-          <dt>Languages</dt>
-          <dd>English (C2), Spanish (native)</dd>
-        </dl>
+      <p class="kicker">05 <span>// capture the flag</span></p>
+      <h2 class="title glitch" id="ctf-title" data-text="Find the flag.">Find the flag.</h2>
+      <div class="ctf reveal">
+        <p>A flag in the format <span class="mono">SQ{…}</span> is split into three pieces and hidden on this site. No tools needed beyond your browser.</p>
+        <ol>
+          <li>Developers read the source.</li>
+          <li>Consoles talk, in base64.</li>
+          <li>Shells hide dotfiles, in hex.</li>
+        </ol>
+        <form id="ctf-form" autocomplete="off">
+          <label for="ctf-input" class="sr-only">Flag</label>
+          <input id="ctf-input" type="text" placeholder="SQ{...}" spellcheck="false" autocapitalize="off">
+          <button class="btn btn-hot" type="submit">Submit flag</button>
+        </form>
+        <p class="ctf-result" id="ctf-result" role="status"></p>
       </div>
     </div>
   </section>
 
   <section class="section" id="now" aria-labelledby="now-title">
     <div class="wrap">
-      <h2 id="now-title">Now</h2>
-      <div class="section-body">
-        <ul class="plain-list">
-          <li>Building out <a href="https://github.com/MrDavidson23/rag-security">rag-security</a> as a hands-on AI security project.</li>
-          <li>Studying offensive security and data analysis for cybersecurity in my master's.</li>
-          <li>Working fully remote with international teams (English C2).</li>
-        </ul>
-      </div>
+      <p class="kicker">06 <span>// tail -f now.log</span></p>
+      <h2 class="title glitch" id="now-title" data-text="Right now.">Right now.</h2>
+      <ul class="now-list">
+        <li class="reveal"><b>Building</b><a href="https://github.com/MrDavidson23/rag-security">rag-security</a> as a hands-on AI security project.</li>
+        <li class="reveal"><b>Studying</b>Offensive security and data analysis for cybersecurity in my master's.</li>
+        <li class="reveal"><b>Working</b>Fully remote with international teams, in English (C2) and Spanish.</li>
+      </ul>
     </div>
   </section>
 
-  <section class="section" id="contact" aria-labelledby="contact-title">
+  <section class="section contact" id="contact" aria-labelledby="contact-title">
     <div class="wrap">
-      <h2 id="contact-title">Contact</h2>
-      <div class="section-body">
-        <p>I'm open to remote roles in AI engineering, full-stack, and application security. Let's build something good. Email is the best way to reach me.</p>
-        <div class="contact-links">
-          <a class="btn btn-solid" href="mailto:squesadac@gmail.com">squesadac@gmail.com</a>
-          <a class="btn" href="https://www.linkedin.com/in/sebas-quesada/">LinkedIn</a>
-          <a class="btn" href="https://github.com/MrDavidson23">GitHub</a>
-          <a class="btn" href="CV.pdf">Download my CV</a>
-        </div>
+      <p class="kicker">07 <span>// ./connect.sh</span></p>
+      <h2 class="title glitch" id="contact-title" data-text="Let's build something secure.">Let's build something secure.</h2>
+      <p>I'm open to remote roles in AI engineering, full-stack, and application security. Email is the best way to reach me.</p>
+      <div class="contact-links">
+        <a class="btn btn-hot" href="mailto:squesadac@gmail.com">squesadac@gmail.com</a>
+        <button class="btn" type="button" id="copy-email">Copy email</button>
+        <a class="btn" href="https://www.linkedin.com/in/sebas-quesada/">LinkedIn ↗</a>
+        <a class="btn" href="https://github.com/MrDavidson23">GitHub ↗</a>
+        <a class="btn" href="CV.pdf">Download CV</a>
       </div>
     </div>
   </section>
@@ -401,7 +686,7 @@
 
 <footer class="site-footer">
   <div class="wrap">
-    <p>© <span id="year">2026</span> Sebastián Quesada Calderón. San José, Costa Rica.</p>
+    <p>© <span id="year">2026</span> Sebastián Quesada Calderón · San José, Costa Rica · no trackers, no frameworks</p>
     <nav aria-label="Footer">
       <a href="https://github.com/MrDavidson23">GitHub</a>
       <a href="https://www.linkedin.com/in/sebas-quesada/">LinkedIn</a>
@@ -411,16 +696,350 @@
   </div>
 </footer>
 
+<div class="cursor" aria-hidden="true"></div>
+<div class="cursor-ring" aria-hidden="true"></div>
+
 <script>
-  (function () {
-    var year = document.getElementById('year');
-    if (year) year.textContent = new Date().getFullYear();
-    var header = document.querySelector('.site-header');
-    if (!header) return;
-    var update = function () { header.setAttribute('data-scrolled', String(window.scrollY > 8)); };
-    window.addEventListener('scroll', update, { passive: true });
-    update();
-  })();
+(function () {
+  'use strict';
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+
+  var rand = function (s) { return s[Math.floor(Math.random() * s.length)]; };
+  var EMAIL = 'squesadac@gmail.com';
+  var heroStarted = false;
+  var FLAG_SHA256 = 'a03876ee1fcaa4c4e768f818dca56b0308269953c2673d8d6a6fdfabcddd7250';
+
+  /* Console easter egg (flag part 2) */
+  try {
+    console.log('%c sebas@ibm:~$ ', 'background:#8B5CF6;color:#fff;font:700 14px monospace;padding:4px 6px;border-radius:4px');
+    console.log('%cLooking under the hood? Same. Here is something for you:', 'color:#BBA4FF;font:12px monospace');
+    console.log('%cflag part 2/3 (base64): dGgzXw==', 'color:#F0ABFC;font:700 12px monospace');
+  } catch (e) {}
+
+  /* Year + clock */
+  var year = document.getElementById('year');
+  if (year) year.textContent = new Date().getFullYear();
+  var clock = document.getElementById('clock');
+  if (clock) {
+    var fmt;
+    try { fmt = new Intl.DateTimeFormat('en-GB', { timeZone: 'America/Costa_Rica', hour: '2-digit', minute: '2-digit', second: '2-digit' }); } catch (e) {}
+    var tick = function () { if (fmt) clock.textContent = fmt.format(new Date()) + ' CST'; };
+    tick(); setInterval(tick, 1000);
+  }
+
+  /* Boot sequence: once per session */
+  var seen = false;
+  try { seen = sessionStorage.getItem('booted') === '1'; sessionStorage.setItem('booted', '1'); } catch (e) {}
+  if (!reduce && !seen) {
+    var boot = document.createElement('div');
+    boot.className = 'boot'; boot.setAttribute('aria-hidden', 'true');
+    var lines = [
+      ['ok', '[  OK  ] Mounting /dev/sebas'],
+      ['ok', '[  OK  ] Loading modules: react.ko node.ko typescript.ko'],
+      ['ok', '[  OK  ] Starting threat-model.service'],
+      ['ok', '[  OK  ] Decrypting portfolio'],
+      ['warn', '[ WARN ] 1 flag left unguarded'],
+    ];
+    var box = document.createElement('div');
+    boot.appendChild(box);
+    document.body.appendChild(boot);
+    var i = 0;
+    var end = function () { boot.classList.add('done'); setTimeout(function () { boot.remove(); }, 500); startHero(); };
+    var step = function () {
+      if (i >= lines.length) { setTimeout(end, 260); return; }
+      var p = document.createElement('p');
+      var tag = document.createElement('span'); tag.className = lines[i][0];
+      tag.textContent = lines[i][1].slice(0, 10);
+      p.appendChild(tag); p.appendChild(document.createTextNode(lines[i][1].slice(10)));
+      box.appendChild(p); i++;
+      setTimeout(step, 170);
+    };
+    var skip = document.createElement('small'); skip.textContent = 'press any key to skip';
+    boot.appendChild(skip);
+    var skipFn = function () { if (!boot.classList.contains('done')) { i = lines.length; end(); } window.removeEventListener('keydown', skipFn); boot.removeEventListener('click', skipFn); };
+    window.addEventListener('keydown', skipFn); boot.addEventListener('click', skipFn);
+    step();
+  } else {
+    startHero();
+  }
+
+  /* Decrypt headline */
+  function startHero() {
+    if (heroStarted) return; heroStarted = true;
+    var el = document.querySelector('[data-decrypt]');
+    if (!el || reduce) return;
+    el.setAttribute('aria-label', el.textContent);
+    el.style.minHeight = el.offsetHeight + 'px';
+    var nodes = [];
+    var walker = document.createTreeWalker(el, NodeFilter.SHOW_TEXT);
+    while (walker.nextNode()) nodes.push({ node: walker.currentNode, text: walker.currentNode.nodeValue });
+    var total = nodes.reduce(function (n, x) { return n + x.text.length; }, 0);
+    var UP = 'ABCDEFGHKMNOPRSUVXZ', LOW = 'abcdeghknopqrsuvxz';
+    var scramble = function (ch) {
+      if (/[A-Z]/.test(ch)) return rand(UP);
+      if (/[a-z]/.test(ch)) return rand(LOW);
+      return ch;
+    };
+    var finish = function () { nodes.forEach(function (x) { x.node.nodeValue = x.text; }); el.style.minHeight = ''; };
+    var start = performance.now(), dur = 1100, finished = false;
+    (function frame(now) {
+      if (finished) return;
+      var done = Math.min(1, (now - start) / dur);
+      var reveal = Math.floor(done * total), k = 0;
+      nodes.forEach(function (x) {
+        var out = '';
+        for (var c = 0; c < x.text.length; c++, k++) out += k < reveal ? x.text[c] : scramble(x.text[c]);
+        x.node.nodeValue = out;
+      });
+      if (done < 1) requestAnimationFrame(frame); else { finished = true; finish(); }
+    })(start);
+    setTimeout(function () { if (!finished) { finished = true; finish(); } }, dur + 400);
+  }
+
+  /* X-ray lens */
+  var hero = document.getElementById('hero');
+  var back = hero && hero.querySelector('.xray-back');
+  if (hero && back) {
+    var hex = '0123456789abcdef';
+    var fill = function () {
+      var area = hero.offsetWidth * hero.offsetHeight;
+      var n = Math.ceil(area / 95);
+      var frag = document.createDocumentFragment();
+      var buf = '';
+      for (var j = 0; j < n; j++) {
+        if (j > 0 && j % 420 === 0) {
+          frag.appendChild(document.createTextNode(buf)); buf = '';
+          var em = document.createElement('em'); em.textContent = ' find_the_flag→#ctf ';
+          frag.appendChild(em);
+        }
+        buf += rand(hex);
+      }
+      frag.appendChild(document.createTextNode(buf));
+      back.textContent = '';
+      back.appendChild(frag);
+    };
+    fill();
+    var rt; window.addEventListener('resize', function () { clearTimeout(rt); rt = setTimeout(fill, 200); });
+    if (finePointer && !reduce) {
+      hero.addEventListener('pointermove', function (e) {
+        var r = hero.getBoundingClientRect();
+        hero.style.setProperty('--x', (e.clientX - r.left) + 'px');
+        hero.style.setProperty('--y', (e.clientY - r.top) + 'px');
+        hero.setAttribute('data-lens', 'on');
+      });
+      hero.addEventListener('pointerleave', function () { hero.setAttribute('data-lens', 'off'); });
+    }
+  }
+
+  /* Custom cursor */
+  if (finePointer && !reduce) {
+    document.documentElement.classList.add('has-cursor');
+    var dot = document.querySelector('.cursor'), ring = document.querySelector('.cursor-ring');
+    var mx = -100, my = -100, rx = -100, ry = -100;
+    window.addEventListener('pointermove', function (e) { mx = e.clientX; my = e.clientY; dot.style.transform = 'translate(' + mx + 'px,' + my + 'px)'; });
+    (function loop() { rx += (mx - rx) * 0.18; ry += (my - ry) * 0.18; ring.style.transform = 'translate(' + rx + 'px,' + ry + 'px)'; requestAnimationFrame(loop); })();
+    document.addEventListener('pointerover', function (e) { ring.classList.toggle('big', !!e.target.closest('a, button, summary, input, .chip')); });
+  }
+
+  /* Scroll progress */
+  var bar = document.querySelector('.progress');
+  var onScroll = function () {
+    var h = document.documentElement.scrollHeight - innerHeight;
+    bar.style.transform = 'scaleX(' + (h > 0 ? scrollY / h : 0) + ')';
+  };
+  window.addEventListener('scroll', onScroll, { passive: true }); onScroll();
+
+  /* Reveal, bars, scan typing, counters */
+  var countUp = function (el) {
+    var to = +el.getAttribute('data-count'), suf = el.getAttribute('data-suffix') || '';
+    if (reduce) return;
+    var s = performance.now();
+    (function f(t) { var p = Math.min(1, (t - s) / 1000); el.textContent = Math.round(to * (1 - Math.pow(1 - p, 3))) + suf; if (p < 1) requestAnimationFrame(f); })(s);
+    setTimeout(function () { el.textContent = to + suf; }, 1300);
+  };
+  var typeScan = function (scan) {
+    var items = scan.querySelectorAll('.typed');
+    items.forEach(function (n) { n.style.opacity = '0'; });
+    scan.classList.add('in');
+    items.forEach(function (n, idx) { setTimeout(function () { n.style.opacity = ''; }, reduce ? 0 : 160 * idx); });
+  };
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (!en.isIntersecting) return;
+        var t = en.target;
+        t.classList.add('in');
+        if (t.classList.contains('scan')) typeScan(t);
+        if (t.classList.contains('stats')) t.querySelectorAll('[data-count]').forEach(countUp);
+        io.unobserve(t);
+      });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+  } else {
+    document.querySelectorAll('.reveal').forEach(function (el) { el.classList.add('in'); });
+  }
+
+  /* Copy email */
+  var copyBtn = document.getElementById('copy-email');
+  if (copyBtn) copyBtn.addEventListener('click', function () {
+    var done = function () { copyBtn.textContent = 'Copied ✓'; setTimeout(function () { copyBtn.textContent = 'Copy email'; }, 1600); };
+    if (navigator.clipboard) navigator.clipboard.writeText(EMAIL).then(done, function () { copyBtn.textContent = EMAIL; });
+    else copyBtn.textContent = EMAIL;
+  });
+
+  /* Flag check */
+  function sha256(text) {
+    if (!(window.crypto && crypto.subtle)) return Promise.reject(new Error('no subtle crypto'));
+    return crypto.subtle.digest('SHA-256', new TextEncoder().encode(text)).then(function (buf) {
+      return Array.prototype.map.call(new Uint8Array(buf), function (b) { return ('0' + b.toString(16)).slice(-2); }).join('');
+    });
+  }
+  function burst(x, y) {
+    if (reduce) return;
+    for (var j = 0; j < 36; j++) {
+      var s = document.createElement('span');
+      s.className = 'spark'; s.textContent = rand('01{}#$SQ★');
+      s.style.left = x + 'px'; s.style.top = y + 'px';
+      document.body.appendChild(s);
+      var a = Math.random() * Math.PI * 2, d = 80 + Math.random() * 220;
+      var anim = s.animate([{ transform: 'translate(0,0)', opacity: 1 }, { transform: 'translate(' + Math.cos(a) * d + 'px,' + Math.sin(a) * d + 'px) rotate(' + (Math.random() * 720 - 360) + 'deg)', opacity: 0 }], { duration: 900 + Math.random() * 600, easing: 'cubic-bezier(.2,.8,.2,1)' });
+      anim.onfinish = (function (n) { return function () { n.remove(); }; })(s);
+    }
+  }
+  function checkFlag(value) {
+    return sha256(value.trim()).then(function (h) { return h === FLAG_SHA256; });
+  }
+  function pwned(x, y) {
+    document.body.classList.remove('pwned'); void document.body.offsetWidth; document.body.classList.add('pwned');
+    burst(x, y);
+  }
+  var ctfForm = document.getElementById('ctf-form');
+  var ctfInput = document.getElementById('ctf-input');
+  var ctfResult = document.getElementById('ctf-result');
+  if (ctfForm) ctfForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+    checkFlag(ctfInput.value).then(function (ok) {
+      ctfResult.className = 'ctf-result ' + (ok ? 'ok' : 'err');
+      if (ok) {
+        ctfResult.textContent = '';
+        ctfResult.appendChild(document.createTextNode('✓ Flag accepted. You read source code for fun, so we should talk. Email me with the flag in the subject: '));
+        var a = document.createElement('a'); a.href = 'mailto:' + EMAIL + '?subject=' + encodeURIComponent(ctfInput.value.trim()); a.textContent = EMAIL;
+        ctfResult.appendChild(a);
+        var r = ctfForm.querySelector('button').getBoundingClientRect();
+        pwned(r.left + r.width / 2, r.top + r.height / 2);
+      } else {
+        ctfResult.textContent = '✗ Access denied. Check all three pieces.';
+      }
+    }, function () { ctfResult.className = 'ctf-result err'; ctfResult.textContent = 'Your browser cannot verify flags here (needs HTTPS).'; });
+  });
+
+  /* Terminal */
+  var out = document.getElementById('term-out');
+  var form = document.getElementById('term-form');
+  var input = document.getElementById('term-input');
+  if (!out || !form || !input) return;
+  var history = [], hIdx = 0;
+
+  function print(text, cls) {
+    var p = document.createElement('p');
+    if (cls) p.className = cls;
+    p.textContent = text;
+    out.appendChild(p);
+    out.scrollTop = out.scrollHeight;
+    return p;
+  }
+  function printLink(label, href, prefix) {
+    var p = print(prefix || '');
+    var a = document.createElement('a'); a.href = href; a.textContent = label;
+    if (/^https?:/.test(href)) { a.target = '_blank'; a.rel = 'noopener'; }
+    p.appendChild(a);
+  }
+
+  var FILES = {
+    'about.txt': ['Sebastián Quesada Calderón. Senior software engineer at IBM, Costa Rica.', 'Shipping React, React Native, and Node.js products since 2020.', 'Now moving into AI and offensive security. CEH. Master\'s in Cybersecurity at TEC (in progress).'],
+    'experience.log': ['2023-01..now   IBM            Senior Software Engineer   watsonx.ai, React, Node.js, IBM Cloud', '2022-02..2023  First Factory  Software Engineer          analytics dashboard, AWS Lambda, Terraform', '2020-01..2022  Pancake        Software Engineer          serverless AWS backends, React, Next.js'],
+    'skills.nmap': ['443/tcp  web        React, TypeScript, React Native, Next.js', '3000/tcp node       Node.js, Express, NestJS, GraphQL', '8888/tcp data-ai    Python, SQL, watsonx.ai, RAG', '1337/tcp security   LLM security, CEH, Kali Linux', '(full scan: scroll up to ./scan)'],
+    '.flag_part3': ['73336e3130727d', '# hex. you know what to do.'],
+    '.bash_history': ['nmap -sV sebas.quesada', 'cat .flag_part3', 'ssh recruiter@your-company', 'sudo hire-me'],
+  };
+
+  var COMMANDS = {
+    help: function () {
+      [['whoami', 'who is this guy'], ['ls [-a]', 'list files'], ['cat <file>', 'print a file'], ['contact', 'ways to reach me'], ['cv', 'open my CV'], ['flag <SQ{...}>', 'submit the CTF flag'], ['sudo hire-me', 'you know you want to'], ['clear', 'clear the screen']]
+        .forEach(function (r) { print(('  ' + r[0] + '                ').slice(0, 20) + r[1], 'dim'); });
+    },
+    whoami: function () { print('sebastian quesada calderón', 'acc'); print('senior software engineer @ IBM · web platforms since 2020 · CEH · moving into AI + offensive security'); },
+    ls: function (args) {
+      var names = Object.keys(FILES).filter(function (n) { return args.indexOf('-a') > -1 || args.indexOf('-la') > -1 || n[0] !== '.'; });
+      print(names.concat(['cv.pdf']).join('   '));
+    },
+    cat: function (args) {
+      var f = args[0];
+      if (!f) return print('cat: missing file operand', 'err');
+      if (f === 'cv.pdf') return print('cat: cv.pdf: binary file. try `cv`', 'warn');
+      if (!FILES[f]) return print('cat: ' + f + ': No such file or directory', 'err');
+      FILES[f].forEach(function (l) { print(l); });
+    },
+    contact: function () {
+      printLink(EMAIL, 'mailto:' + EMAIL, 'email     ');
+      printLink('linkedin.com/in/sebas-quesada', 'https://www.linkedin.com/in/sebas-quesada/', 'linkedin  ');
+      printLink('github.com/MrDavidson23', 'https://github.com/MrDavidson23', 'github    ');
+    },
+    cv: function () { print('opening cv.pdf …', 'ok'); window.open('CV.pdf', '_blank', 'noopener'); },
+    email: function () { print('opening mail client …', 'ok'); location.href = 'mailto:' + EMAIL; },
+    date: function () { print(new Date().toString()); },
+    echo: function (args) { print(args.join(' ')); },
+    pwd: function () { print('/home/guest'); },
+    exit: function () { print('there is no escape. try `contact` instead.', 'warn'); },
+    clear: function () { out.textContent = ''; },
+    flag: function (args) {
+      var v = args.join(' ');
+      if (!v) return print('usage: flag SQ{...}', 'warn');
+      checkFlag(v).then(function (ok) {
+        if (ok) { print('✓ flag accepted. email me with it in the subject → ' + EMAIL, 'ok'); var r = input.getBoundingClientRect(); pwned(r.left + 40, r.top); }
+        else print('✗ access denied', 'err');
+      }, function () { print('cannot verify flags here (needs HTTPS)', 'err'); });
+    },
+    sudo: function (args) {
+      if (args[0] === 'hire-me' || args.join(' ') === 'hire me') {
+        print('[sudo] password for guest: ********', 'dim');
+        setTimeout(function () { print('access granted. opening a secure channel to ' + EMAIL + ' …', 'ok'); }, 500);
+        setTimeout(function () { location.href = 'mailto:' + EMAIL + '?subject=' + encodeURIComponent("Let's talk"); }, 1300);
+      } else if (args.join(' ').indexOf('rm -rf') === 0) {
+        print('nice try.', 'err');
+      } else {
+        print('guest is not in the sudoers file. This incident will be reported. 👀', 'err');
+      }
+    },
+    rm: function () { print('rm: permission denied. this is a portfolio, not a playground. (ok, it is a bit of a playground)', 'err'); },
+    hack: function () { print('hacking the mainframe … just kidding. try finding the flag instead.', 'acc'); },
+  };
+
+  function run(raw) {
+    var line = raw.trim();
+    print('guest@sebas:~$ ' + raw, 'echo');
+    if (!line) return;
+    history.push(line); hIdx = history.length;
+    var parts = line.split(/\s+/), cmd = parts[0].toLowerCase(), args = parts.slice(1);
+    if (COMMANDS.hasOwnProperty(cmd)) COMMANDS[cmd](args);
+    else print('command not found: ' + cmd + '. try `help`', 'err');
+  }
+
+  print('Welcome, guest. This shell is read-only, but curious people are welcome.', 'dim');
+  print('Type `help` to start.', 'dim');
+
+  form.addEventListener('submit', function (e) { e.preventDefault(); run(input.value); input.value = ''; });
+  input.addEventListener('keydown', function (e) {
+    if (e.key === 'ArrowUp') { if (hIdx > 0) { hIdx--; input.value = history[hIdx]; } e.preventDefault(); }
+    else if (e.key === 'ArrowDown') { if (hIdx < history.length - 1) { hIdx++; input.value = history[hIdx]; } else { hIdx = history.length; input.value = ''; } e.preventDefault(); }
+    else if (e.key === 'l' && e.ctrlKey) { e.preventDefault(); COMMANDS.clear(); }
+  });
+  document.querySelectorAll('.chip[data-cmd]').forEach(function (b) {
+    b.addEventListener('click', function () { run(b.getAttribute('data-cmd')); input.focus({ preventScroll: true }); });
+  });
+  out.addEventListener('click', function () { if (!getSelection().toString()) input.focus({ preventScroll: true }); });
+})();
 </script>
 </body>
 </html>
